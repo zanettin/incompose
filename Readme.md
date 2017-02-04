@@ -16,7 +16,7 @@ npm install incompose
 - [withState](https://github.com/acdlite/recompose/blob/master/docs/API.md#withstate)
 - withHandlers => **not supported**! use the nativ supported `Inferno.linkEvent(data, handler)` (https://infernojs.org/docs/api/inferno) instead!
 
-more will comming soon (PRs welcome).
+more comming soon (PRs welcome).
 
 ## Usage
 Please refer to the official recompose Page (https://github.com/acdlite/recompose/blob/master/docs/API.md)

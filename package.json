@@ -2,6 +2,7 @@
   "name": "incompose",
   "version": "0.0.1",
   "description": "A inferno utility belt for function components and higher-order components",
+  "repository": "https://github.com/zanettin/incompose",
   "keywords": [
     "inferno",
     "recompose",
