@@ -8,7 +8,7 @@ Incompose is a [Inferno.js](https://infernojs.org/) clone of the famouse [recomp
 npm install incompose
 ```
 
-## Supported Methods (WIP)
+## Supported methods (WIP)
 - [compose](https://github.com/acdlite/recompose/blob/master/docs/API.md#compose)
 - [withDefaultProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#defaultprops)
 - [withLifecycle](https://github.com/acdlite/recompose/blob/master/docs/API.md#lifecycle)
