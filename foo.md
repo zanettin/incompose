@@ -3,6 +3,8 @@
 # Incompose
 Incompose is a [Inferno.js](https://infernojs.org/) clone of the famouse [recompose](https://github.com/acdlite/recompose) lib for React.
 
+[![Build Status](https://semaphoreci.com/api/v1/open-source/incompose/branches/master/shields_badge.svg)](https://semaphoreci.com/open-source/incompose)
+
 ## Installation
 ```
 npm install incompose
