@@ -30,5 +30,61 @@ import {withState} from 'incompose';
 import withState from 'incompose/dist/withState';
 ```
 
+### Example
+```javascript
+import {
+  default as Inferno,
+  linkEvent
+} from 'inferno';
+
+import {
+  compose,
+  withState,
+  shouldUpdate
+} from 'incompose';
+
+const inc = (props) => {
+  props.setCount(props.count += 1);
+};
+
+const dec = (props) => {
+  props.setCount(props.count -= 1);
+};
+
+const Counter = (props) => (
+  <div>
+    <h1>count : {props.count}</h1>
+    <button onClick={linkEvent(props, dec)}>-</button>
+    <button onClick={linkEvent(props, inc)}>+</button>
+  </div>
+);
+
+/**
+ * with state creates 2 new props on the component props
+ * props.count		-	contains the value (1 is set as default value)
+ * props.setCount	-	contains the setter function
+ */
+const withCounterState = withState('count', 'setCount', 1);
+
+/**
+ * should update prevents the component of re-render (shouldUpdate lifecycle hook)
+ * you can compare current and next props and decide whether the component
+ * should update or not. In this example, the counter just updates if
+ * props.count is even.
+ */
+const withUpdatePolicy = shouldUpdate((props, nextProps) => (
+  nextProps.count % 2 === 0
+));
+
+/**
+ * with compose all the extendend functions are composed BEFORE Counter
+ * gets rendered. Please not that order matters.
+ */
+export default compose(
+  withCounterState,
+  withUpdatePolicy,
+)(Counter);
+```
+
 ## Thanks
 Special thanks to all the contributors and Andrew Clark ([@acdlite](https://twitter.com/acdlite)) for creating this amazing lib for React!
