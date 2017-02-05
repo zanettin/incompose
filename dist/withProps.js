@@ -20,7 +20,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
  * @param   {Object}    - component props
  * @returns {Function}
  */
-
 exports.default = function (config) {
   return function (component) {
     return function (props) {

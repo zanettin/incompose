@@ -16,7 +16,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param   {Object}    - component props
  * @returns {Function}
  */
-
 exports.default = function (onComponentShouldUpdate) {
   return function (component) {
     return function (props) {

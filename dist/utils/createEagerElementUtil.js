@@ -14,6 +14,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var createVNode = _inferno2.default.createVNode;
 
+
 var createEagerElementUtil = function createEagerElementUtil(hasKey, isReferentiallyTransparent, type, props, children) {
   if (!hasKey && isReferentiallyTransparent) {
     if (children) {
