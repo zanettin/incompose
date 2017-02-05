@@ -3,7 +3,6 @@
  * @desc   use 'onComponentShouldUpdate' lifecycle hook to determine if component should update or not
  * @author Roman Zanettin <roman.zanettin@ringieraxelspringer.ch>
  * @date   2017-01-06
- * @flow
  */
 
 import withLifecycle from './withLifecycle';

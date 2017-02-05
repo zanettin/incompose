@@ -1,0 +1,19 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+   "inferno"
+  ],
+  "extends": "eslint:recommended",
+  "rules": {
+    "semi": 2,
+    "inferno/jsx-uses-inferno": "error",
+    "inferno/jsx-uses-vars": "error"
+  }
+}

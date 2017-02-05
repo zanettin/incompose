@@ -3,7 +3,6 @@
  * @desc   appends default props on component init (does not overwrite existing props)
  * @author Roman Zanettin <roman.zanettin@ringieraxelspringer.ch>
  * @date   2017-01-06
- * @flow
  */
 
 /**

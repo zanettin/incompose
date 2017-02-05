@@ -1,11 +1,10 @@
 /**
  * @author recompose (https://github.com/acdlite/recompose)
- * @flow
  */
 
-import Component from 'inferno-component'
-import createHelper from './createHelper'
-import createEagerFactory from './createEagerFactory'
+import Component from 'inferno-component';
+import createHelper from './createHelper';
+import createEagerFactory from './createEagerFactory';
 
 const withState = (stateName, stateUpdaterName, initialState) =>
   BaseComponent => {
@@ -30,9 +29,9 @@ const withState = (stateName, stateUpdaterName, initialState) =>
           ...this.props,
           [stateName]: this.state.stateValue,
           [stateUpdaterName]: this.updateStateValue
-        })
+        });
       }
-    }
-  }
+    };
+  };
 
-export default createHelper(withState, 'withState')
+export default createHelper(withState, 'withState');
