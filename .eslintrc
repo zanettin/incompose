@@ -13,7 +13,7 @@
   "extends": "eslint:recommended",
   "rules": {
     "semi": 2,
-    "inferno/jsx-uses-inferno": "error",
-    "inferno/jsx-uses-vars": "error"
+    "inferno/jsx-uses-inferno": 2,
+    "inferno/jsx-uses-vars": 2
   }
 }
