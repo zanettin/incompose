@@ -10,18 +10,22 @@ Incompose is a [Inferno.js](https://infernojs.org/) clone of the famouse [recomp
 npm install incompose
 ```
 
-## Supported methods (WIP)
+## Support
+This project is under development. New functions will be added soon. PRs are welcome.
+
+### Supported functions
 - [compose](https://github.com/acdlite/recompose/blob/master/docs/API.md#compose)
 - [withDefaultProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#defaultprops)
 - [withLifecycle](https://github.com/acdlite/recompose/blob/master/docs/API.md#lifecycle)
 - [withProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#withprops)
 - [withState](https://github.com/acdlite/recompose/blob/master/docs/API.md#withstate)
-- withHandlers => **not supported**! use the nativ supported `Inferno.linkEvent(data, handler)` (https://infernojs.org/docs/api/inferno) instead!
 
-more comming soon (PRs welcome).
+### Not supported functions
+- withHandlers
+-- use the nativ supported `Inferno.linkEvent(data, handler)` (https://infernojs.org/docs/api/inferno) instead.
 
 ## Usage
-Please refer to the official recompose github page (https://github.com/acdlite/recompose/blob/master/docs/API.md)
+Please refer to the official [recompose Github page](https://github.com/acdlite/recompose/blob/master/docs/API.md)
 
 ### Import
 Incompose provides named and default imports:
