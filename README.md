@@ -13,23 +13,23 @@ npm install incompose
 ## Support
 This project is under development. New functions will be added soon. PRs are welcome.
 
-| Function | since  |
-|-|:-: |
+| Function | since |
+| --- | :---: |
 |[compose](https://github.com/acdlite/recompose/blob/master/docs/API.md#compose)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[defaultProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#defaultprops)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[flattenProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#flattenprops)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
-|[renderNothing](https://github.com/acdlite/recompose/blob/master/docs/API.md#rendernothing)|![wip](https://img.shields.io/badge/version-_WIP_-blue.svg)|
+|[renderNothing](https://github.com/acdlite/recompose/blob/master/docs/API.md#rendernothing)|![wip](https://img.shields.io/badge/version-_WIP_-lightgrey.svg)|
 |[renameProp](https://github.com/acdlite/recompose/blob/master/docs/API.md#renameprop)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
 |[renameProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#renameprops)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
 |[withLifecycle](https://github.com/acdlite/recompose/blob/master/docs/API.md#lifecycle)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
-|[withHandlers](https://github.com/acdlite/recompose/blob/master/docs/API.md#withhandlers)|![wip](https://img.shields.io/badge/version-_WIP_-blue.svg)|
+|[withHandlers](https://github.com/acdlite/recompose/blob/master/docs/API.md#withhandlers)|![wip](https://img.shields.io/badge/version-_WIP_-lightgrey.svg)|
 |[withProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#withprops)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
-|[withPropsOnChange](https://github.com/acdlite/recompose/blob/master/docs/API.md#withpropsonchange)|![wip](https://img.shields.io/badge/version-_WIP_-blue.svg)|
+|[withPropsOnChange](https://github.com/acdlite/recompose/blob/master/docs/API.md#withpropsonchange)|![wip](https://img.shields.io/badge/version-_WIP_-lightgrey.svg)|
 |[withState](https://github.com/acdlite/recompose/blob/master/docs/API.md#withstate)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 
 
 ## Usage
-Please refer to the official [recompose Github page](https://github.com/acdlite/recompose/blob/master/docs/API.md)
+Please refer to the official [recompose Github page](https://github.com/acdlite/recompose/blob/master/docs/API.md).
 
 ### Import
 Incompose provides named and default imports:
