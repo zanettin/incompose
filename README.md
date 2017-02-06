@@ -98,4 +98,4 @@ export default compose(
 Special thanks to all the contributors and Andrew Clark ([@acdlite](https://twitter.com/acdlite)) for creating this amazing lib for React!
 
 ## Changelog
-[Changelog] is available [here](Changelog.md).
+Changelog is available [here](CHANGELOG.md).
