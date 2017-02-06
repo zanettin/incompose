@@ -1,6 +1,6 @@
 /**
- * @file   withDefaultProps
- * @desc   appends default props on component init (does not overwrite existing props)
+ * @file   defaultProps
+ * @desc   sets default values for owner props
  * @author Roman Zanettin <roman.zanettin@ringieraxelspringer.ch>
  * @date   2017-01-06
  */

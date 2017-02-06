@@ -5,9 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = compose;
 /**
- * @file   compose
  * @author recompose (https://github.com/acdlite/recompose)
- * @flow
  */
 
 function compose() {

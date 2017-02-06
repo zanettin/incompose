@@ -8,7 +8,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /**
  * @author recompose (https://github.com/acdlite/recompose)
- * @flow
  */
 
 var isClassComponent = function isClassComponent(Component) {

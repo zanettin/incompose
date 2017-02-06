@@ -13,16 +13,14 @@ npm install incompose
 ## Support
 This project is under development. New functions will be added soon. PRs are welcome.
 
-### Supported functions
-- [compose](https://github.com/acdlite/recompose/blob/master/docs/API.md#compose)
-- [withDefaultProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#defaultprops)
-- [withLifecycle](https://github.com/acdlite/recompose/blob/master/docs/API.md#lifecycle)
-- [withProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#withprops)
-- [withState](https://github.com/acdlite/recompose/blob/master/docs/API.md#withstate)
-
-### Not supported functions
-- withHandlers
--- use the nativ supported `Inferno.linkEvent(data, handler)` (https://infernojs.org/docs/api/inferno) instead.
+* [compose](https://github.com/acdlite/recompose/blob/master/docs/API.md#compose) (>= v0.0.3)
+* [defaultProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#defaultprops) (>= v0.0.3)
+* [renameProp](https://github.com/acdlite/recompose/blob/master/docs/API.md#renameprop) (>= v0.0.4)
+* [renameProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#renameprops) (>= v0.0.4)
+* [flattenProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#flattenprops) (>= v0.0.4)
+* [withLifecycle](https://github.com/acdlite/recompose/blob/master/docs/API.md#lifecycle (>= v0.0.3))
+* [withProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#withprops) (>= v0.0.3)
+* [withState](https://github.com/acdlite/recompose/blob/master/docs/API.md#withstate) (>= v0.0.3)
 
 ## Usage
 Please refer to the official [recompose Github page](https://github.com/acdlite/recompose/blob/master/docs/API.md)

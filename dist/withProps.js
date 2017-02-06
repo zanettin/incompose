@@ -11,7 +11,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
  * @desc   appends props on component init (does overwrite existing props)
  * @author Roman Zanettin <roman.zanettin@ringieraxelspringer.ch>
  * @date   2017-01-06
- * @flow
  */
 
 /**

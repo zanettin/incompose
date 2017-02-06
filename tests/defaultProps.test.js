@@ -1,4 +1,4 @@
-import withDefaultProps from '../src/withDefaultProps';
+import defaultProps from '../src/defaultProps';
 
 const originalProps = {
   a : 1,
@@ -6,7 +6,7 @@ const originalProps = {
   c : 3,
 };
 
-const defaultProps = {
+const defaultPropsValues = {
   a : 10, // NO overwrite original
   b : 20, // NO overwrite original
   d : 4,  // extends original
@@ -16,7 +16,7 @@ const component = (props) => props;
 
 test('should add additional props to components original props', () => {
 
-  const props = withDefaultProps(defaultProps)(component)(originalProps);
+  const props = defaultProps(defaultPropsValues)(component)(originalProps);
   expect(props).toEqual({
     a : 1,
     b : 2,

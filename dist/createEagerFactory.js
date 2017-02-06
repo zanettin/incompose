@@ -16,7 +16,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * @author recompose (https://github.com/acdlite/recompose)
- * @flow
  */
 
 var createFactory = function createFactory(type) {

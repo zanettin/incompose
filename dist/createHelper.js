@@ -8,9 +8,9 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /**
  * @author recompose (https://github.com/acdlite/recompose)
- * @flow
  */
 
+/*eslint-env node*/
 var createHelper = function createHelper(func, helperName) {
   var setDisplayName = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
   var noArgs = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;

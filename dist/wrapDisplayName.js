@@ -14,7 +14,6 @@ var wrapDisplayName = function wrapDisplayName(BaseComponent, hocName) {
   return hocName + '(' + (0, _getDisplayName2.default)(BaseComponent) + ')';
 }; /**
     * @author recompose (https://github.com/acdlite/recompose)
-    * @flow
     */
 
 exports.default = wrapDisplayName;

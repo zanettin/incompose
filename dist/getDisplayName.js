@@ -5,7 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 /**
  * @author recompose (https://github.com/acdlite/recompose)
- * @flow
  */
 
 var getDisplayName = function getDisplayName(Component) {

@@ -22,12 +22,12 @@ Object.defineProperty(exports, 'shouldUpdate', {
   }
 });
 
-var _withDefaultProps = require('./withDefaultProps');
+var _defaultProps = require('./defaultProps');
 
-Object.defineProperty(exports, 'withDefaultProps', {
+Object.defineProperty(exports, 'defaultProps', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_withDefaultProps).default;
+    return _interopRequireDefault(_defaultProps).default;
   }
 });
 
