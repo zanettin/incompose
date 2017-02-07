@@ -25,4 +25,3 @@ test('should add additional props to components original props', () => {
   });
 
 });
-
