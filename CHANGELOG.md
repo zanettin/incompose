@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Documentation
+- createSink
 
 ## [0.0.5] - 2017-02-07
 ### Added

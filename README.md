@@ -16,6 +16,7 @@ This project is under development. New functions will be added soon. PRs are wel
 | Function | since |
 | --- | :---: |
 |[compose](docs/compose.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
+|[createSink](docs/createSink.md)|![0.0.6](https://img.shields.io/badge/version-0.0.6-green.svg)|
 |[defaultProps](docs/defaultProps.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[flattenProps](docs/flattenProps.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
 |[renderNothing](docs/renderNothing.md)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
