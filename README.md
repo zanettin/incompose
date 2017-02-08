@@ -15,17 +15,18 @@ This project is under development. New functions will be added soon. PRs are wel
 
 | Function | since |
 | --- | :---: |
-|[compose](https://github.com/acdlite/recompose/blob/master/docs/API.md#compose)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
-|[defaultProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#defaultprops)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
-|[flattenProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#flattenprops)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
-|[renderNothing](https://github.com/acdlite/recompose/blob/master/docs/API.md#rendernothing)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
-|[renameProp](https://github.com/acdlite/recompose/blob/master/docs/API.md#renameprop)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
-|[renameProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#renameprops)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
-|[withLifecycle](https://github.com/acdlite/recompose/blob/master/docs/API.md#lifecycle)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
-|[withHandlers](https://github.com/acdlite/recompose/blob/master/docs/API.md#withhandlers)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
-|[withProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#withprops)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
-|[withPropsOnChange](https://github.com/acdlite/recompose/blob/master/docs/API.md#withpropsonchange)|![wip](https://img.shields.io/badge/version-_WIP_-lightgrey.svg)|
-|[withState](https://github.com/acdlite/recompose/blob/master/docs/API.md#withstate)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
+|[compose](docs/compose.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
+|[defaultProps](docs/defaultProps.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
+|[flattenProps](docs/flattenProps.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
+|[renderNothing](docs/renderNothing.md)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
+|[renameProp](docs/renameProp.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
+|[renameProps](docs/renameProps.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
+|[shouldUpdate](docs/shouldUpdate.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
+|[withLifecycle](docs/withLifecycle.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
+|[withHandlers](docs/withHandlers.md)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
+|[withProps](docs/withProps.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
+|withPropsOnChange|![wip](https://img.shields.io/badge/version-_WIP_-lightgrey.svg)|
+|[withState](docs/withState.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 
 
 ## Usage

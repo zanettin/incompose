@@ -5,12 +5,12 @@
  */
 
 export {default as compose} from './compose';
-export {default as shouldUpdate} from './shouldUpdate';
 export {default as defaultProps} from './defaultProps';
 export {default as flattenProps} from './flattenProps';
 export {default as renderNothing} from './renderNothing';
 export {default as renameProp} from './renameProp';
 export {default as renameProps} from './renameProps';
+export {default as shouldUpdate} from './shouldUpdate';
 export {default as withLifecycle} from './withLifecycle';
 export {default as withHandlers} from './withHandlers';
 export {default as withProps} from './withProps';
