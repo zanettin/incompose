@@ -26,7 +26,7 @@ This project is under development. New functions will be added soon. PRs are wel
 |[withLifecycle](docs/withLifecycle.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[withHandlers](docs/withHandlers.md)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
 |[withProps](docs/withProps.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
-|withPropsOnChange|![wip](https://img.shields.io/badge/version-_WIP_-lightgrey.svg)|
+|[withPropsOnChange](docs/withPropsOnChange.md)|![0.0.6](https://img.shields.io/badge/version-0.0.6-blue.svg)|
 |[withState](docs/withState.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 
 

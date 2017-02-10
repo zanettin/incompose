@@ -13,12 +13,12 @@ Object.defineProperty(exports, 'compose', {
   }
 });
 
-var _shouldUpdate = require('./shouldUpdate');
+var _createSink = require('./createSink');
 
-Object.defineProperty(exports, 'shouldUpdate', {
+Object.defineProperty(exports, 'createSink', {
   enumerable: true,
   get: function get() {
-    return _interopRequireDefault(_shouldUpdate).default;
+    return _interopRequireDefault(_createSink).default;
   }
 });
 
@@ -67,6 +67,15 @@ Object.defineProperty(exports, 'renameProps', {
   }
 });
 
+var _shouldUpdate = require('./shouldUpdate');
+
+Object.defineProperty(exports, 'shouldUpdate', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_shouldUpdate).default;
+  }
+});
+
 var _withLifecycle = require('./withLifecycle');
 
 Object.defineProperty(exports, 'withLifecycle', {
@@ -91,6 +100,15 @@ Object.defineProperty(exports, 'withProps', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_withProps).default;
+  }
+});
+
+var _withPropsOnChange = require('./withPropsOnChange');
+
+Object.defineProperty(exports, 'withPropsOnChange', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_withPropsOnChange).default;
   }
 });
 

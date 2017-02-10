@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Documentation
 - createSink
 
+### Fixed
+- isClassComponent check
+
 ## [0.0.5] - 2017-02-07
 ### Added
 - Changelog.md

@@ -8,12 +8,14 @@
     }
   },
   "plugins": [
-   "inferno"
+   "inferno",
+   "import"
   ],
   "extends": "eslint:recommended",
   "rules": {
     "semi": 2,
     "inferno/jsx-uses-inferno": 2,
-    "inferno/jsx-uses-vars": 2
+    "inferno/jsx-uses-vars": 2,
+    "import/no-unresolved": 2
   }
 }

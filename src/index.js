@@ -5,6 +5,7 @@
  */
 
 export {default as compose} from './compose';
+export {default as createSink} from './createSink';
 export {default as defaultProps} from './defaultProps';
 export {default as flattenProps} from './flattenProps';
 export {default as renderNothing} from './renderNothing';
@@ -14,4 +15,5 @@ export {default as shouldUpdate} from './shouldUpdate';
 export {default as withLifecycle} from './withLifecycle';
 export {default as withHandlers} from './withHandlers';
 export {default as withProps} from './withProps';
+export {default as withPropsOnChange} from './withPropsOnChange';
 export {default as withState} from './withState';
