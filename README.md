@@ -11,7 +11,7 @@ npm install incompose
 ```
 
 ## Support
-This project is under development. New functions will be added soon. PRs are welcome.
+Following HoCs are available. If you miss any helper/HoC please send me a note on twitter [@zanettin](https://twitter.com/roman_zanettin) or create an issue / open a PR. Thanks.
 
 | Function | since |
 | --- | :---: |
@@ -19,14 +19,16 @@ This project is under development. New functions will be added soon. PRs are wel
 |[createSink](docs/createSink.md)|![0.0.6](https://img.shields.io/badge/version-0.0.6-green.svg)|
 |[defaultProps](docs/defaultProps.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[flattenProps](docs/flattenProps.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
+|[nest](docs/nest.md)|![0.0.7](https://img.shields.io/badge/version-0.0.7-green.svg)|
 |[renderNothing](docs/renderNothing.md)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
 |[renameProp](docs/renameProp.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
 |[renameProps](docs/renameProps.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
 |[shouldUpdate](docs/shouldUpdate.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
-|[withLifecycle](docs/withLifecycle.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[withHandlers](docs/withHandlers.md)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
+|[withLifecycle](docs/withLifecycle.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[withProps](docs/withProps.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[withPropsOnChange](docs/withPropsOnChange.md)|![0.0.6](https://img.shields.io/badge/version-0.0.6-green.svg)|
+|[withReducer](docs/withReducer.md)|![0.0.7](https://img.shields.io/badge/version-0.0.7-green.svg)|
 |[withState](docs/withState.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 
 

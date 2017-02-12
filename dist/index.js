@@ -40,6 +40,15 @@ Object.defineProperty(exports, 'flattenProps', {
   }
 });
 
+var _nest = require('./nest');
+
+Object.defineProperty(exports, 'nest', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_nest).default;
+  }
+});
+
 var _renderNothing = require('./renderNothing');
 
 Object.defineProperty(exports, 'renderNothing', {
@@ -109,6 +118,15 @@ Object.defineProperty(exports, 'withPropsOnChange', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_withPropsOnChange).default;
+  }
+});
+
+var _withReducer = require('./withReducer');
+
+Object.defineProperty(exports, 'withReducer', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_withReducer).default;
   }
 });
 

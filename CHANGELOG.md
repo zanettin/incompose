@@ -4,7 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.0.7] - 2017-02-12
+### Added
+- nest
+- withReducer
 
 ## [0.0.6] - 2017-02-10
 ### Added
