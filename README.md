@@ -1,7 +1,7 @@
 ![Inferno JS Logo](https://cdn-images-1.medium.com/max/1600/1*NZoKqwcj_x9W1Zh-eWWeCw.png "Inferno JS")
 
 # Incompose
-Incompose is a [Inferno.js](https://infernojs.org/) clone of the famouse [recompose](https://github.com/acdlite/recompose) lib for React.
+Incompose is a [Inferno.js](https://infernojs.org/) clone of the famous [recompose](https://github.com/acdlite/recompose) lib for React.
 
 [![Build Status](https://semaphoreci.com/api/v1/open-source/incompose/branches/master/shields_badge.svg)](https://semaphoreci.com/open-source/incompose) [![npm version](https://badge.fury.io/js/incompose.svg)](https://badge.fury.io/js/incompose) [![npm downloads](https://img.shields.io/npm/dm/incompose.svg?style=flat-square)](https://www.npmjs.com/package/incompose) [![Code Climate](https://codeclimate.com/github/zanettin/incompose/badges/gpa.svg)](https://codeclimate.com/github/zanettin/incompose) [![Test Coverage](https://codeclimate.com/github/zanettin/incompose/badges/coverage.svg)](https://codeclimate.com/github/zanettin/incompose/coverage) [![MIT](https://img.shields.io/npm/l/express.svg)](LICENSE.md)
 
