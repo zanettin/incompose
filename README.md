@@ -11,7 +11,7 @@ npm install incompose
 ```
 
 ## Support
-Following HoCs are available. If you miss any helper/HoC please send me a note on twitter [@zanettin](https://twitter.com/roman_zanettin) or create an issue / open a PR. Thanks.
+Following HoCs are available. If you miss any helper/HoC please send me a note on twitter [@roman_zanettin](https://twitter.com/roman_zanettin) or create an issue / open a PR. Thanks.
 
 | Function | since |
 | --- | :---: |
