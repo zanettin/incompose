@@ -17,5 +17,9 @@
     "inferno/jsx-uses-inferno": 2,
     "inferno/jsx-uses-vars": 2,
     "import/no-unresolved": 2
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }
