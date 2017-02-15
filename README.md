@@ -15,11 +15,14 @@ Following HoCs are available. If you miss any helper/HoC please send me a note o
 
 | Function | since |
 | --- | :---: |
+|[branch](docs/branch.md)|![WIP](https://img.shields.io/badge/version-_WIP_-gray.svg)|
 |[compose](docs/compose.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[createSink](docs/createSink.md)|![0.0.6](https://img.shields.io/badge/version-0.0.6-green.svg)|
 |[defaultProps](docs/defaultProps.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[flattenProps](docs/flattenProps.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
 |[nest](docs/nest.md)|![0.0.7](https://img.shields.io/badge/version-0.0.7-green.svg)|
+|[pure](docs/pure.md)|![WIP](https://img.shields.io/badge/version-_WIP_-gray.svg)|
+|[renderComponent](docs/renderComponent)|![WIP](https://img.shields.io/badge/version-_WIP_-gray.svg)|
 |[renderNothing](docs/renderNothing.md)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
 |[renameProp](docs/renameProp.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
 |[renameProps](docs/renameProps.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|

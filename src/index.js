@@ -4,11 +4,14 @@
  * @date   2017-02-05
  */
 
+export {default as branch} from './branch';
 export {default as compose} from './compose';
 export {default as createSink} from './createSink';
 export {default as defaultProps} from './defaultProps';
 export {default as flattenProps} from './flattenProps';
 export {default as nest} from './nest';
+export {default as pure} from './pure';
+export {default as renderComponent} from './renderComponent';
 export {default as renderNothing} from './renderNothing';
 export {default as renameProp} from './renameProp';
 export {default as renameProps} from './renameProps';

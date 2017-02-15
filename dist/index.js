@@ -4,6 +4,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _branch = require('./branch');
+
+Object.defineProperty(exports, 'branch', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_branch).default;
+  }
+});
+
 var _compose = require('./compose');
 
 Object.defineProperty(exports, 'compose', {
@@ -46,6 +55,24 @@ Object.defineProperty(exports, 'nest', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_nest).default;
+  }
+});
+
+var _pure = require('./pure');
+
+Object.defineProperty(exports, 'pure', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_pure).default;
+  }
+});
+
+var _renderComponent = require('./renderComponent');
+
+Object.defineProperty(exports, 'renderComponent', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_renderComponent).default;
   }
 });
 
