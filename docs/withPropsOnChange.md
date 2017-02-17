@@ -31,7 +31,7 @@ const dec = (props) => {
 };
 
 const performHeavyCalculation = (props) => {
-  // ... do some heavy liftings
+  // ... do some heavy lifting
   return 1;
 }
 
@@ -46,7 +46,7 @@ const Counter = (props) => (
 const withCounterState = withState('count', 'setCount', 1);
 
 /**
- * if next counter value can be devided by 2 without any rest
+ * if next counter value can be divided by 2 without any rest
  * the function on the `specialProp` key will be re-executed
  * and the new value set. Otherwise nothing will change and
  * your heavy calculation won't be executed.

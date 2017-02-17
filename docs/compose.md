@@ -46,7 +46,7 @@ const Counter = (props) => (
 const withCounterState = withState('count', 'setCount', 1);
 
 /**
- * with compose all the extendend functions are composed BEFORE Counter
+ * with compose all the extended functions are composed BEFORE Counter
  * gets rendered. Please not that order matters.
  */
 export default compose(
