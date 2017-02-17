@@ -26,6 +26,11 @@
     "lint": "./node_modules/.bin/eslint src/**",
     "ci": "npm run test && npm run lint"
   },
+  "dependencies": {
+    "inferno": "^1.2.2",
+    "inferno-component": "^1.2.2",
+    "inferno-create-element": "^1.2.2"
+  },
   "devDependencies": {
     "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
@@ -38,14 +43,6 @@
     "eslint": "^3.15.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-inferno": "^6.9.2",
-    "inferno": "^1.2.2",
-    "inferno-component": "^1.2.2",
-    "inferno-create-element": "^1.2.2",
     "jest": "^18.1.0"
-  },
-  "peerDependencies": {
-    "inferno": "^1.2.0",
-    "inferno-component": "^1.2.0",
-    "inferno-create-element": "^1.2.0"
   }
 }
