@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.11] - 2017-02-23
+### Fixed
+- issue #2 (inferno-devtools crashes because of withLifecycle)
+
+### Breaking changes
+- lifecycle hooks have to be named like class lifecycle hooks and no longer like the functional component lifecycle hooks.
+from: `onComponentDidMount` to: `componentDidMount`.
 
 ## [0.0.10] - 2017-02-17
 ### Fixed

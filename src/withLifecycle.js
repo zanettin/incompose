@@ -1,16 +1,35 @@
 /**
- * @file   withLifecycle
- * @desc   use the lifecycle hooks of functional inferno components and make them usable inside of the component
- * @author Roman Zanettin <roman.zanettin@ringieraxelspringer.ch>
- * @date   2017-01-06
+ * @author recompose (https://github.com/acdlite/recompose)
  */
 
-import createElement from 'inferno-create-element';
+import { createClass } from 'inferno-compat';
+import createHelper from './createHelper';
+import createEagerFactory from './createEagerFactory';
 
-/**
- * @param   {Object}    - lifecycle config
- * @param   {Function}  - component
- * @param   {Object}    - component props
- * @returns {Function}
- */
-export default (config) => (component) => (props) => createElement(component, {...props, ...config});
+const lifecycle = spec => BaseComponent => {
+  const factory = createEagerFactory(BaseComponent);
+
+  if (
+    process.env.NODE_ENV !== 'production' &&
+    spec.hasOwnProperty('render')
+  ) {
+    console.error(
+      'lifecycle() does not support the render method; its behavior is to ' +
+      'pass all props and state to the base component.'
+    );
+  }
+
+  /* eslint-disable react/prefer-es6-class */
+  return createClass({
+    ...spec,
+    render() {
+      return factory({
+        ...this.props,
+        ...this.state
+      });
+    }
+  });
+  /* eslint-enable react/prefer-es6-class */
+};
+
+export default createHelper(lifecycle, 'lifecycle');

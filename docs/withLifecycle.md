@@ -28,9 +28,9 @@ const Counter = (props) => (
 
 export default compose(
   withLifecycle({
-    onComponentDidMount     : (el) => console.warn('mounted'),
-    onComponentWillUnmount  : () => console.warn('will unmount'),
-    onComponentShouldUpdate : (props, nextProps)  => true; // on false, component won't update
+    componentDidMount     : (el) => console.warn('mounted'),
+    componentWillUnmount  : () => console.warn('will unmount'),
+    componentShouldUpdate : (props, nextProps)  => true; // on false, component won't update
   }),
 )(Counter);
 ```

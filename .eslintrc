@@ -16,7 +16,8 @@
     "semi": 2,
     "inferno/jsx-uses-inferno": 2,
     "inferno/jsx-uses-vars": 2,
-    "import/no-unresolved": 2
+    "import/no-unresolved": 2,
+    "no-console": 0
   },
   "env": {
     "browser": true,
