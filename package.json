@@ -1,6 +1,6 @@
 {
   "name": "incompose",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A inferno utility belt for function components and higher-order components",
   "repository": {
     "type": "git",
