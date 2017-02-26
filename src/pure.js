@@ -18,7 +18,7 @@ const withUpdatePolicy = shouldUpdate((props, nextProps) => {
 
   const keys = Object.keys(props);
 
-  for(let i = 0; i < keys; i += 1) {
+  for(let i = 0; i < keys.length; i += 1) {
     if (props[keys[i]] !== nextProps[keys[i]]) {
       return true; // just update if we find a shallow diff
     }
