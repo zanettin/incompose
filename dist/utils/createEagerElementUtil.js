@@ -28,12 +28,12 @@ var createEagerElementUtil = function createEagerElementUtil(hasKey, isReferenti
   var Component = type;
 
   if (children) {
-    return createVNode(16, Component, _extends({}, props, {
+    return createVNode(16, Component, null, null, _extends({}, props, {
       children: children
     }));
   }
 
-  return createVNode(16, Component, _extends({}, props));
+  return createVNode(16, Component, null, null, _extends({}, props));
 };
 
 exports.default = createEagerElementUtil;
