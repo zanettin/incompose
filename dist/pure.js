@@ -31,7 +31,7 @@ var withUpdatePolicy = (0, _shouldUpdate2.default)(function (props, nextProps) {
 
   var keys = Object.keys(props);
 
-  for (var i = 0; i < keys; i += 1) {
+  for (var i = 0; i < keys.length; i += 1) {
     if (props[keys[i]] !== nextProps[keys[i]]) {
       return true; // just update if we find a shallow diff
     }

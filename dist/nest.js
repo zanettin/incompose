@@ -37,7 +37,7 @@ exports.default = function () {
       var nextProps = props;
 
       if (PrevComponent !== null) {
-        nextProps.children = createVNode(16, PrevComponent, _extends({}, nextProps));
+        nextProps.children = createVNode(16, PrevComponent, null, null, _extends({}, nextProps));
       }
 
       return nextProps;
