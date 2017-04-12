@@ -1,6 +1,6 @@
 {
   "name": "incompose",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "An inferno utility belt for function components and higher-order components",
   "repository": {
     "type": "git",
@@ -17,7 +17,11 @@
     "component",
     "hoc"
   ],
-  "author": "Roman Zanettin <roman.zanettin@gmail.com>",
+  "author": {
+    "name": "Roman Zanettin",
+    "email" : "roman.zanettin@gmail.com",
+    "url": "http://github.com/zanettin"
+  },
   "license": "MIT",
   "scripts": {
     "test": "jest",
@@ -25,7 +29,7 @@
     "prepublish": "npm run build",
     "lint": "eslint src/**",
     "cspell": "cspell src/**/*.js tests/**/*.js docs/**/*.md --config ./cSpell.json",
-    "ci": "npm run test && npm run lint"
+    "ci": "npm run test && npm run lint & npm run cspell"
   },
   "dependencies": {
     "inferno": "^3.0.3",
