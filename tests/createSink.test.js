@@ -1,6 +1,6 @@
 import createSink from '../src/createSink';
 
-test('should call callback, everytime the base props change', () => {
+test('should call callback, every time the base props change', () => {
 
   const cb    = jest.fn();
   const props = {check : 'okay'};

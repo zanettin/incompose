@@ -8,7 +8,7 @@ const originalProps = {
 
 const component = (props) => props;
 
-test('should raname prop `a` to `z`', () => {
+test('should rename prop `a` to `z`', () => {
 
   const props = renameProp('a', 'z')(component)(originalProps);
   expect(props).toEqual({
@@ -18,4 +18,3 @@ test('should raname prop `a` to `z`', () => {
   });
 
 });
-

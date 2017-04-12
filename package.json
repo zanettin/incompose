@@ -1,7 +1,7 @@
 {
   "name": "incompose",
   "version": "0.0.13",
-  "description": "A inferno utility belt for function components and higher-order components",
+  "description": "An inferno utility belt for function components and higher-order components",
   "repository": {
     "type": "git",
     "url": "git://github.com/zanettin/incompose.git"
@@ -21,9 +21,10 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "build": "./node_modules/.bin/babel src --out-dir dist",
+    "build": "babel src --out-dir dist",
     "prepublish": "npm run build",
-    "lint": "./node_modules/.bin/eslint src/**",
+    "lint": "eslint src/**",
+    "cspell": "cspell src/**/*.js tests/**/*.js docs/**/*.md --config ./cSpell.json",
     "ci": "npm run test && npm run lint"
   },
   "dependencies": {
@@ -39,9 +40,17 @@
     "babel-plugin-inferno": "^3.2.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "cspell": "^1.5.0",
     "eslint": "^3.19.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-inferno": "^6.10.4",
     "jest": "^19.0.2"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Carsten Lamm",
+      "email": "CarstenLamm+incompose@gmail.com",
+      "url": "https://github.com/FQ400"
+    }
+  ]
 }
