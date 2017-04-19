@@ -12,7 +12,7 @@ withHandlers(
 ```
 
 ## Example
-```javascript
+```jsx
 import Inferno from 'inferno';
 import {
   compose,

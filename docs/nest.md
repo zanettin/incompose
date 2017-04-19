@@ -10,7 +10,7 @@ nest(
 ```
 
 ## Example
-```javascript
+```jsx
 import Inferno from 'inferno';
 import {nest} from 'incompose';
 

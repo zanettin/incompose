@@ -11,7 +11,7 @@ renameProp(
 ```
 
 ## Example
-```javascript
+```jsx
 import Inferno from 'inferno';
 
 import {

@@ -19,7 +19,7 @@
   ],
   "author": {
     "name": "Roman Zanettin",
-    "email" : "roman.zanettin@gmail.com",
+    "email": "roman.zanettin@gmail.com",
     "url": "http://github.com/zanettin"
   },
   "license": "MIT",
@@ -32,14 +32,14 @@
     "ci": "npm run test && npm run lint & npm run cspell"
   },
   "dependencies": {
-    "inferno": "^3.0.3",
-    "inferno-compat": "^3.0.3",
-    "inferno-component": "^3.0.3"
+    "inferno": "^3.0.4",
+    "inferno-compat": "^3.0.4",
+    "inferno-component": "^3.0.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^7.2.2",
     "babel-jest": "^19.0.0",
     "babel-plugin-inferno": "^3.2.0",
     "babel-preset-es2015": "^6.24.1",

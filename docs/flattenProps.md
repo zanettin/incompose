@@ -10,7 +10,7 @@ flattenProps(
 ```
 
 ## Example
-```javascript
+```jsx
 import Inferno from 'inferno';
 
 import {
@@ -35,7 +35,7 @@ import {
  */
 const LeaderBoard = (props) => (
   <div>
-    <h1>{props.name} {props.lastName</h1>
+    <h1>{props.name} {props.lastName}</h1>
     age : {props.age}
   </div>
 );

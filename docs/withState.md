@@ -12,7 +12,7 @@ withState(
 ```
 
 ## Example
-```javascript
+```jsx
 import {
   default as Inferno,
   linkEvent

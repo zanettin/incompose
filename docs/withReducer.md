@@ -15,7 +15,7 @@ withReducer<S, A>(
 ```
 
 ## Example
-```javascript
+```jsx
 import Inferno from 'inferno';
 import {
   compose,
