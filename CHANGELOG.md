@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.15] - 2017-05-2
+### Update
+- updated npm dependencies and fixes - thx to @FQ400!
+- updated docs
+
 ## [0.0.14] - 2017-04-12
 ### Fixed
 - fixed `isClassComponent` - thx to @FQ400!
