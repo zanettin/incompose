@@ -48,7 +48,6 @@ import withState from 'incompose/dist/withState';
 ### Example
 ```javascript
 import {
-  default as Inferno,
   linkEvent
 } from 'inferno';
 
