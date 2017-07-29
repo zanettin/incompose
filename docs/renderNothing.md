@@ -9,8 +9,6 @@ renderNothing() : Function
 
 ## Example
 ```jsx
-import Inferno from 'inferno';
-
 import {
   compose,
   renderNothing

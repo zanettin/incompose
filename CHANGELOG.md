@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.0] - 2017-07-29
+### Update
+- updated npm dependencies
+- updated docs
+- moved to first stable version
+
 ## [0.0.15] - 2017-05-2
 ### Update
 - updated npm dependencies and fixes - thx to @FQ400!

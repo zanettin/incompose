@@ -13,7 +13,6 @@ branch(
 
 ## Example
 ```jsx
-import Inferno from 'inferno';
 import {
   branch,
   compose,

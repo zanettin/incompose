@@ -13,7 +13,6 @@ compose(
 ## Example
 ```jsx
 import {
-  default as Inferno,
   linkEvent
 } from 'inferno';
 

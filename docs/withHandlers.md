@@ -13,7 +13,6 @@ withHandlers(
 
 ## Example
 ```jsx
-import Inferno from 'inferno';
 import {
   compose,
   withState,

@@ -9,7 +9,6 @@ pure : Function
 
 ## Example
 ```jsx
-import Inferno from 'inferno';
 import {
   compose,
   pure,

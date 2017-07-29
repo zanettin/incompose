@@ -11,7 +11,6 @@ nest(
 
 ## Example
 ```jsx
-import Inferno from 'inferno';
 import {nest} from 'incompose';
 
 const A = (props) => (

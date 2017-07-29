@@ -14,8 +14,6 @@ withPropsOnChange(
 
 ## Example
 ```jsx
-import Inferno from 'inferno';
-
 import {
   compose,
   withPropsOnChange,

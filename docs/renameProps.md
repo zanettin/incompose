@@ -11,8 +11,6 @@ renameProps(
 
 ## Example
 ```jsx
-import Inferno from 'inferno';
-
 import {
   compose,
   renameProp

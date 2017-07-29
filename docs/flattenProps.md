@@ -11,8 +11,6 @@ flattenProps(
 
 ## Example
 ```jsx
-import Inferno from 'inferno';
-
 import {
   compose,
   withDefaultProps
