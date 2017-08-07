@@ -28,7 +28,7 @@ Following HoCs are available. If you miss any helper/HoC please send me a note o
 |[renderNothing](docs/renderNothing.md)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
 |[renameProp](docs/renameProp.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
 |[renameProps](docs/renameProps.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
-|[setObservableConfig](docs/setObservableStream.md)|![1.1.0](https://img.shields.io/badge/version-1.1.0-green.svg)|
+|[setObservableConfig](docs/setObservableConfig.md)|![1.1.0](https://img.shields.io/badge/version-1.1.0-green.svg)|
 |[shouldUpdate](docs/shouldUpdate.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[withHandlers](docs/withHandlers.md)|![0.0.5](https://img.shields.io/badge/version-0.0.5-green.svg)|
 |[withLifecycle](docs/withLifecycle.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
