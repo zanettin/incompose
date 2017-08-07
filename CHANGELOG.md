@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.0] - 2017-08-07
+### Added
+- componentFromStream
+- createEventHandler
+- setObservableConfig
+- observable configs for bacon, flyd, kefir, most, rxjs4, rxjs, xstream
+
+### Update
+- updated npm dependencies
+
 ## [1.0.0] - 2017-07-29
 ### Update
 - updated npm dependencies

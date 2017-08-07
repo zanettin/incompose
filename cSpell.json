@@ -7,11 +7,15 @@
     // words - list of words to be always considered correct
     "words": [
         "Incompose",
-        "zanettin",
-        "unmount",
+        "flyd",
         "lifecycle",
+        "lodash's",
         "referentially",
-        "lodash's"
+        "rxjsconfig",
+        "unmount",
+        "vdom",
+        "xstream",
+        "zanettin"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.

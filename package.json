@@ -32,9 +32,11 @@
     "ci": "npm run test && npm run lint && npm run cspell"
   },
   "dependencies": {
-    "inferno": "^3.7.0",
-    "inferno-compat": "^3.7.0",
-    "inferno-component": "^3.7.0"
+    "change-emitter": "^0.1.6",
+    "inferno": "^3.7.1",
+    "inferno-compat": "^3.7.1",
+    "inferno-component": "^3.7.1",
+    "symbol-observable": "^1.0.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -44,8 +46,8 @@
     "babel-plugin-inferno": "^3.2.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "cspell": "^1.8.1",
-    "eslint": "^4.3.0",
+    "cspell": "^1.9.2",
+    "eslint": "^4.4.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-inferno": "^7.0.1",
     "jest": "^20.0.4"

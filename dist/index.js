@@ -13,12 +13,30 @@ Object.defineProperty(exports, 'branch', {
   }
 });
 
+var _componentFromStream = require('./componentFromStream');
+
+Object.defineProperty(exports, 'componentFromStream', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_componentFromStream).default;
+  }
+});
+
 var _compose = require('./compose');
 
 Object.defineProperty(exports, 'compose', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_compose).default;
+  }
+});
+
+var _createEventHandler = require('./createEventHandler');
+
+Object.defineProperty(exports, 'createEventHandler', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_createEventHandler).default;
   }
 });
 
@@ -100,6 +118,15 @@ Object.defineProperty(exports, 'renameProps', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_renameProps).default;
+  }
+});
+
+var _setObservableConfig = require('./setObservableConfig');
+
+Object.defineProperty(exports, 'setObservableConfig', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_setObservableConfig).default;
   }
 });
 
