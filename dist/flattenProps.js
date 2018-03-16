@@ -16,7 +16,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 export default (function (propName) {
   return function (component) {
     return function (props) {
-
       var newProps = props[propName] && _typeof(props[propName]) === 'object' ? Object.assign({}, props, props[propName]) : Object.assign({}, props);
 
       if (newProps[propName]) {

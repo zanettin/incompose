@@ -18,45 +18,45 @@ import shallowEqual from './shallowEqual';
 import createHelper from './createHelper';
 
 var withPropsOnChange = function withPropsOnChange(shouldMapOrKeys, propsMapper) {
-  return function (BaseComponent) {
-    var shouldMap = typeof shouldMapOrKeys === 'function' ? shouldMapOrKeys : function (props, nextProps) {
-      return !shallowEqual(pick(props, shouldMapOrKeys), pick(nextProps, shouldMapOrKeys));
-    };
+	return function (BaseComponent) {
+		var shouldMap = typeof shouldMapOrKeys === 'function' ? shouldMapOrKeys : function (props, nextProps) {
+			return !shallowEqual(pick(props, shouldMapOrKeys), pick(nextProps, shouldMapOrKeys));
+		};
 
-    return function (_Component) {
-      _inherits(_class2, _Component);
+		return function (_Component) {
+			_inherits(_class2, _Component);
 
-      function _class2() {
-        var _ref;
+			function _class2() {
+				var _ref;
 
-        var _temp, _this, _ret;
+				var _temp, _this, _ret;
 
-        _classCallCheck(this, _class2);
+				_classCallCheck(this, _class2);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-          args[_key] = arguments[_key];
-        }
+				for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+					args[_key] = arguments[_key];
+				}
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _class2.__proto__ || Object.getPrototypeOf(_class2)).call.apply(_ref, [this].concat(args))), _this), _this.computedProps = propsMapper(_this.props), _temp), _possibleConstructorReturn(_this, _ret);
-      }
+				return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _class2.__proto__ || Object.getPrototypeOf(_class2)).call.apply(_ref, [this].concat(args))), _this), _this.computedProps = propsMapper(_this.props), _temp), _possibleConstructorReturn(_this, _ret);
+			}
 
-      _createClass(_class2, [{
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps) {
-          if (shouldMap(this.props, nextProps)) {
-            this.computedProps = propsMapper(nextProps);
-          }
-        }
-      }, {
-        key: 'render',
-        value: function render() {
-          return normalizeProps(createComponentVNode(2, BaseComponent, Object.assign({}, Object.assign(this.props, this.computedProps))));
-        }
-      }]);
+			_createClass(_class2, [{
+				key: 'componentWillReceiveProps',
+				value: function componentWillReceiveProps(nextProps) {
+					if (shouldMap(this.props, nextProps)) {
+						this.computedProps = propsMapper(nextProps);
+					}
+				}
+			}, {
+				key: 'render',
+				value: function render() {
+					return normalizeProps(createComponentVNode(2, BaseComponent, Object.assign({}, Object.assign(this.props, this.computedProps))));
+				}
+			}]);
 
-      return _class2;
-    }(Component);
-  };
+			return _class2;
+		}(Component);
+	};
 };
 
 export default createHelper(withPropsOnChange, 'withPropsOnChange');

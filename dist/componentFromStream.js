@@ -18,90 +18,90 @@ import $$observable from 'symbol-observable';
 import { config as globalConfig } from './setObservableConfig';
 
 export var componentFromStreamWithConfig = function componentFromStreamWithConfig(config) {
-  return function (propsToVdom) {
-    return function (_Component) {
-      _inherits(ComponentFromStream, _Component);
+	return function (propsToVdom) {
+		return function (_Component) {
+			_inherits(ComponentFromStream, _Component);
 
-      function ComponentFromStream() {
-        var _ref;
+			function ComponentFromStream() {
+				var _ref;
 
-        var _temp, _this, _ret;
+				var _temp, _this, _ret;
 
-        _classCallCheck(this, ComponentFromStream);
+				_classCallCheck(this, ComponentFromStream);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-          args[_key] = arguments[_key];
-        }
+				for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+					args[_key] = arguments[_key];
+				}
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ComponentFromStream.__proto__ || Object.getPrototypeOf(ComponentFromStream)).call.apply(_ref, [this].concat(args))), _this), _this.state = { vdom: null }, _this.propsEmitter = createChangeEmitter(), _this.props$ = config.fromESObservable(_defineProperty({
-          subscribe: function subscribe(observer) {
-            var unsubscribe = _this.propsEmitter.listen(function (props) {
-              if (props) {
-                observer.next(props);
-              } else {
-                observer.complete();
-              }
-            });
-            return { unsubscribe: unsubscribe };
-          }
-        }, $$observable, function () {
-          return this;
-        })), _this.vdom$ = config.toESObservable(propsToVdom(_this.props$)), _temp), _possibleConstructorReturn(_this, _ret);
-      }
+				return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ComponentFromStream.__proto__ || Object.getPrototypeOf(ComponentFromStream)).call.apply(_ref, [this].concat(args))), _this), _this.state = { vdom: null }, _this.propsEmitter = createChangeEmitter(), _this.props$ = config.fromESObservable(_defineProperty({
+					subscribe: function subscribe(observer) {
+						var unsubscribe = _this.propsEmitter.listen(function (props) {
+							if (props) {
+								observer.next(props);
+							} else {
+								observer.complete();
+							}
+						});
+						return { unsubscribe: unsubscribe };
+					}
+				}, $$observable, function () {
+					return this;
+				})), _this.vdom$ = config.toESObservable(propsToVdom(_this.props$)), _temp), _possibleConstructorReturn(_this, _ret);
+			}
 
-      // Stream of props
-
-
-      // Stream of vdom
+			// Stream of props
 
 
-      _createClass(ComponentFromStream, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-          var _this2 = this;
+			// Stream of vdom
 
-          // Subscribe to child prop changes so we know when to re-render
-          this.subscription = this.vdom$.subscribe({
-            next: function next(vdom) {
-              _this2.setState({ vdom: vdom });
-            }
-          });
-          this.propsEmitter.emit(this.props);
-        }
-      }, {
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps) {
-          // Receive new props from the owner
-          this.propsEmitter.emit(nextProps);
-        }
-      }, {
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-          return nextState.vdom !== this.state.vdom;
-        }
-      }, {
-        key: 'componentWillUnmount',
-        value: function componentWillUnmount() {
-          // Call without arguments to complete stream
-          this.propsEmitter.emit();
 
-          // Clean-up subscription before un-mounting
-          this.subscription.unsubscribe();
-        }
-      }, {
-        key: 'render',
-        value: function render() {
-          return this.state.vdom;
-        }
-      }]);
+			_createClass(ComponentFromStream, [{
+				key: 'componentWillMount',
+				value: function componentWillMount() {
+					var _this2 = this;
 
-      return ComponentFromStream;
-    }(Component);
-  };
+					// Subscribe to child prop changes so we know when to re-render
+					this.subscription = this.vdom$.subscribe({
+						next: function next(vdom) {
+							_this2.setState({ vdom: vdom });
+						}
+					});
+					this.propsEmitter.emit(this.props);
+				}
+			}, {
+				key: 'componentWillReceiveProps',
+				value: function componentWillReceiveProps(nextProps) {
+					// Receive new props from the owner
+					this.propsEmitter.emit(nextProps);
+				}
+			}, {
+				key: 'shouldComponentUpdate',
+				value: function shouldComponentUpdate(nextProps, nextState) {
+					return nextState.vdom !== this.state.vdom;
+				}
+			}, {
+				key: 'componentWillUnmount',
+				value: function componentWillUnmount() {
+					// Call without arguments to complete stream
+					this.propsEmitter.emit();
+
+					// Clean-up subscription before un-mounting
+					this.subscription.unsubscribe();
+				}
+			}, {
+				key: 'render',
+				value: function render() {
+					return this.state.vdom;
+				}
+			}]);
+
+			return ComponentFromStream;
+		}(Component);
+	};
 };
 
 var componentFromStream = function componentFromStream(propsToVdom) {
-  return componentFromStreamWithConfig(globalConfig)(propsToVdom);
+	return componentFromStreamWithConfig(globalConfig)(propsToVdom);
 };
 
 export default componentFromStream;

@@ -14,7 +14,6 @@
 export default (function (config) {
   return function (component) {
     return function (props) {
-
       var newProps = Object.keys(props).reduce(function (acc, key) {
         acc[config[key] || key] = props[key];
         return acc;

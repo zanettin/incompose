@@ -12,21 +12,20 @@ import compose from './compose';
 import shouldUpdate from './shouldUpdate';
 
 var withUpdatePolicy = shouldUpdate(function (props, nextProps) {
+	// handle invalid props
+	if (!props || !nextProps || (typeof props === 'undefined' ? 'undefined' : _typeof(props)) !== 'object' || (typeof nextProps === 'undefined' ? 'undefined' : _typeof(nextProps)) !== 'object') {
+		return true;
+	}
 
-  // handle invalid props
-  if (!props || !nextProps || (typeof props === 'undefined' ? 'undefined' : _typeof(props)) !== 'object' || (typeof nextProps === 'undefined' ? 'undefined' : _typeof(nextProps)) !== 'object') {
-    return true;
-  }
+	var keys = Object.keys(props);
 
-  var keys = Object.keys(props);
+	for (var i = 0; i < keys.length; i += 1) {
+		if (props[keys[i]] !== nextProps[keys[i]]) {
+			return true; // just update if we find a shallow diff
+		}
+	}
 
-  for (var i = 0; i < keys.length; i += 1) {
-    if (props[keys[i]] !== nextProps[keys[i]]) {
-      return true; // just update if we find a shallow diff
-    }
-  }
-
-  return false;
+	return false;
 });
 
 /**
@@ -34,5 +33,5 @@ var withUpdatePolicy = shouldUpdate(function (props, nextProps) {
  * @returns {Function}
  */
 export default (function (Component) {
-  return compose(withUpdatePolicy)(Component);
+	return compose(withUpdatePolicy)(Component);
 });

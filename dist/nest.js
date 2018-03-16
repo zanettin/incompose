@@ -8,30 +8,28 @@ import { createComponentVNode, normalizeProps } from 'inferno';
 import Inferno from 'inferno';
 
 export default (function () {
-  for (var _len = arguments.length, Components = Array(_len), _key = 0; _key < _len; _key++) {
-    Components[_key] = arguments[_key];
-  }
+	for (var _len = arguments.length, Components = Array(_len), _key = 0; _key < _len; _key++) {
+		Components[_key] = arguments[_key];
+	}
 
-  return function (props) {
+	return function (props) {
+		if (!Components || Components.length < 1) {
+			return null;
+		}
 
-    if (!Components || Components.length < 1) {
-      return null;
-    }
+		var MainComponent = Components[0];
+		var components = Components.reverse();
+		var propsMap = components.map(function (Component, index) {
+			var PrevComponent = components[index - 1] || null;
+			var nextProps = props;
 
-    var MainComponent = Components[0];
-    var components = Components.reverse();
-    var propsMap = components.map(function (Component, index) {
+			if (PrevComponent !== null) {
+				nextProps.children = normalizeProps(createComponentVNode(2, PrevComponent, Object.assign({}, nextProps)));
+			}
 
-      var PrevComponent = components[index - 1] || null;
-      var nextProps = props;
+			return nextProps;
+		});
 
-      if (PrevComponent !== null) {
-        nextProps.children = normalizeProps(createComponentVNode(2, PrevComponent, Object.assign({}, nextProps)));
-      }
-
-      return nextProps;
-    });
-
-    return MainComponent(propsMap.reverse()[0]);
-  };
+		return MainComponent(propsMap.reverse()[0]);
+	};
 });

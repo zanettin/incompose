@@ -9,23 +9,23 @@ import { createChangeEmitter } from 'change-emitter';
 import { config as globalConfig } from './setObservableConfig';
 
 export var createEventHandlerWithConfig = function createEventHandlerWithConfig(config) {
-  return function () {
-    var emitter = createChangeEmitter();
-    var stream = config.fromESObservable(_defineProperty({
-      subscribe: function subscribe(observer) {
-        var unsubscribe = emitter.listen(function (value) {
-          return observer.next(value);
-        });
-        return { unsubscribe: unsubscribe };
-      }
-    }, $$observable, function () {
-      return this;
-    }));
-    return {
-      handler: emitter.emit,
-      stream: stream
-    };
-  };
+	return function () {
+		var emitter = createChangeEmitter();
+		var stream = config.fromESObservable(_defineProperty({
+			subscribe: function subscribe(observer) {
+				var unsubscribe = emitter.listen(function (value) {
+					return observer.next(value);
+				});
+				return { unsubscribe: unsubscribe };
+			}
+		}, $$observable, function () {
+			return this;
+		}));
+		return {
+			handler: emitter.emit,
+			stream: stream
+		};
+	};
 };
 
 var createEventHandler = createEventHandlerWithConfig(globalConfig);

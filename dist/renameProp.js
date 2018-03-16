@@ -15,7 +15,6 @@
 export default (function (oldName, newName) {
   return function (component) {
     return function (props) {
-
       var newProps = props;
 
       if (props[oldName]) {
