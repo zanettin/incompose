@@ -5,8 +5,8 @@
 import Rx from 'rxjs'; // eslint-disable-line import/no-unresolved
 
 const config = {
-  fromESObservable: Rx.Observable.from,
-  toESObservable: stream => stream,
+	fromESObservable: Rx.Observable.from,
+	toESObservable: stream => stream,
 };
 
 export default config;

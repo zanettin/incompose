@@ -1,30 +1,17 @@
-'use strict';
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+/**
+ * @author recompose (https://github.com/acdlite/recompose)
+ */
 
-var _symbolObservable = require('symbol-observable');
-
-var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
-
-var _flyd = require('flyd');
-
-var _flyd2 = _interopRequireDefault(_flyd);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } /**
-                                                                                                                                                                                                                   * @author recompose (https://github.com/acdlite/recompose)
-                                                                                                                                                                                                                   */
-
-// eslint-disable-line import/no-unresolved
+import $$observable from 'symbol-observable';
+import flyd from 'flyd'; // eslint-disable-line import/no-unresolved
 
 var noop = function noop() {};
 
 var config = {
   fromESObservable: function fromESObservable(observable) {
-    var stream = _flyd2.default.stream();
+    var stream = flyd.stream();
 
     var _observable$subscribe = observable.subscribe({
       next: function next(value) {
@@ -39,15 +26,15 @@ var config = {
     }),
         unsubscribe = _observable$subscribe.unsubscribe;
 
-    _flyd2.default.on(unsubscribe, stream.end);
+    flyd.on(unsubscribe, stream.end);
     return stream;
   },
 
   toESObservable: function toESObservable(stream) {
     return _defineProperty({
       subscribe: function subscribe(observer) {
-        var sub = _flyd2.default.on(observer.next || noop, stream);
-        _flyd2.default.on(function (_) {
+        var sub = flyd.on(observer.next || noop, stream);
+        flyd.on(function (_) {
           return observer.complete();
         }, sub.end); // eslint-disable-line no-unused-vars
         return {
@@ -56,10 +43,10 @@ var config = {
           }
         };
       }
-    }, _symbolObservable2.default, function () {
+    }, $$observable, function () {
       return this;
     });
   }
 };
 
-exports.default = config;
+export default config;

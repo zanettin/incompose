@@ -1,28 +1,14 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createHelper = require('./createHelper');
-
-var _createHelper2 = _interopRequireDefault(_createHelper);
-
-var _createEagerFactory = require('./createEagerFactory');
-
-var _createEagerFactory2 = _interopRequireDefault(_createEagerFactory);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+import { createComponentVNode, normalizeProps } from 'inferno';
 /**
  * @author recompose (https://github.com/acdlite/recompose)
  */
 
+import createHelper from './createHelper';
+
 var renderComponent = function renderComponent(Component) {
   return function () {
-    var factory = (0, _createEagerFactory2.default)(Component);
     var RenderComponent = function RenderComponent(props) {
-      return factory(props);
+      return normalizeProps(createComponentVNode(2, Component, Object.assign({}, props)));
     };
     if (process.env.NODE_ENV !== 'production') {
       /* eslint-disable global-require */
@@ -34,4 +20,4 @@ var renderComponent = function renderComponent(Component) {
   };
 };
 
-exports.default = (0, _createHelper2.default)(renderComponent, 'renderComponent', false);
+export default createHelper(renderComponent, 'renderComponent', false);

@@ -1,9 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 /**
  * @file   renderNothing
  * @desc   a higher order component that always renders null
@@ -11,8 +5,8 @@ Object.defineProperty(exports, "__esModule", {
  * @date   2017-02-07
  */
 
-exports.default = function () {
+export default (function () {
   return function () {
     return null;
   };
-};
+});

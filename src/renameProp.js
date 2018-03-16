@@ -12,15 +12,13 @@
  * @param   {Object}    - component props
  * @returns {Function}
  */
-export default (oldName, newName) => (component) => (props) => {
+export default (oldName, newName) => component => props => {
+	const newProps = props;
 
-  const newProps = props;
+	if (props[oldName]) {
+		newProps[newName] = props[oldName];
+		delete newProps[oldName];
+	}
 
-  if (props[oldName]) {
-    newProps[newName] = props[oldName];
-    delete newProps[oldName];
-  }
-
-  return component(newProps);
+	return component(newProps);
 };
-

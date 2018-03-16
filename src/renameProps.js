@@ -11,12 +11,11 @@
  * @param   {Object}    - component props
  * @returns {Function}
  */
-export default (config) => (component) => (props) => {
+export default config => component => props => {
+	const newProps = Object.keys(props).reduce((acc, key) => {
+		acc[config[key] || key] = props[key];
+		return acc;
+	}, {});
 
-  const newProps = Object.keys(props).reduce((acc, key) => {
-    acc[config[key] || key] = props[key];
-    return acc;
-  }, {});
-
-  return component(newProps);
+	return component(newProps);
 };

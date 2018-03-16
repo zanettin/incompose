@@ -1,24 +1,13 @@
-'use strict';
+import { createComponentVNode, normalizeProps } from 'inferno';
+/**
+ * @file   nest
+ * @author Roman Zanettin <roman.zanettin@ringieraxelspringer.ch>
+ * @date   2017-02-12
+ */
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+import Inferno from 'inferno';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
-                                                                                                                                                                                                                                                                   * @file   nest
-                                                                                                                                                                                                                                                                   * @author Roman Zanettin <roman.zanettin@ringieraxelspringer.ch>
-                                                                                                                                                                                                                                                                   * @date   2017-02-12
-                                                                                                                                                                                                                                                                   */
-
-var _inferno = require('inferno');
-
-var _inferno2 = _interopRequireDefault(_inferno);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var createVNode = _inferno2.default.createVNode;
-
-exports.default = function () {
+export default (function () {
   for (var _len = arguments.length, Components = Array(_len), _key = 0; _key < _len; _key++) {
     Components[_key] = arguments[_key];
   }
@@ -37,7 +26,7 @@ exports.default = function () {
       var nextProps = props;
 
       if (PrevComponent !== null) {
-        nextProps.children = createVNode(16, PrevComponent, null, null, _extends({}, nextProps));
+        nextProps.children = normalizeProps(createComponentVNode(2, PrevComponent, Object.assign({}, nextProps)));
       }
 
       return nextProps;
@@ -45,4 +34,4 @@ exports.default = function () {
 
     return MainComponent(propsMap.reverse()[0]);
   };
-};
+});

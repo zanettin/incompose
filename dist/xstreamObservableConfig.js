@@ -1,30 +1,17 @@
-'use strict';
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+/**
+ * @author recompose (https://github.com/acdlite/recompose)
+ */
 
-var _symbolObservable = require('symbol-observable');
-
-var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
-
-var _xstream = require('xstream');
-
-var _xstream2 = _interopRequireDefault(_xstream);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } /**
-                                                                                                                                                                                                                   * @author recompose (https://github.com/acdlite/recompose)
-                                                                                                                                                                                                                   */
-
-// eslint-disable-line import/no-unresolved
+import $$observable from 'symbol-observable';
+import xstream from 'xstream'; // eslint-disable-line import/no-unresolved
 
 var noop = function noop() {};
 
 var config = {
   fromESObservable: function fromESObservable(observable) {
-    return _xstream2.default.create({
+    return xstream.create({
       subscription: null,
       start: function start(listener) {
         this.subscription = observable.subscribe(listener);
@@ -49,10 +36,10 @@ var config = {
           }
         };
       }
-    }, _symbolObservable2.default, function () {
+    }, $$observable, function () {
       return this;
     });
   }
 };
 
-exports.default = config;
+export default config;

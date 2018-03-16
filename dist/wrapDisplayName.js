@@ -1,19 +1,11 @@
-'use strict';
+/**
+ * @author recompose (https://github.com/acdlite/recompose)
+ */
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _getDisplayName = require('./getDisplayName');
-
-var _getDisplayName2 = _interopRequireDefault(_getDisplayName);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import getDisplayName from './getDisplayName';
 
 var wrapDisplayName = function wrapDisplayName(BaseComponent, hocName) {
-  return hocName + '(' + (0, _getDisplayName2.default)(BaseComponent) + ')';
-}; /**
-    * @author recompose (https://github.com/acdlite/recompose)
-    */
+  return hocName + '(' + getDisplayName(BaseComponent) + ')';
+};
 
-exports.default = wrapDisplayName;
+export default wrapDisplayName;

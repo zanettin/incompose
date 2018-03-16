@@ -6,26 +6,23 @@
 
 import Inferno from 'inferno';
 
-export default (...Components) => (props) => {
+export default (...Components) => props => {
+	if (!Components || Components.length < 1) {
+		return null;
+	}
 
-  if (!Components || Components.length < 1) {
-    return null;
-  }
+	const MainComponent = Components[0];
+	const components = Components.reverse();
+	const propsMap = components.map((Component, index) => {
+		const PrevComponent = components[index - 1] || null;
+		const nextProps = props;
 
-  const MainComponent = Components[0];
-  const components    = Components.reverse();
-  const propsMap      = components.map((Component, index) => {
+		if (PrevComponent !== null) {
+			nextProps.children = <PrevComponent {...nextProps} />;
+		}
 
-    const PrevComponent = components[index - 1] || null;
-    const nextProps = props;
+		return nextProps;
+	});
 
-    if (PrevComponent !== null) {
-      nextProps.children = <PrevComponent {...nextProps} />;
-    }
-
-    return nextProps;
-  });
-
-  return MainComponent(propsMap.reverse()[0]);
-
+	return MainComponent(propsMap.reverse()[0]);
 };

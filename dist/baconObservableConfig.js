@@ -1,37 +1,24 @@
-'use strict';
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+/**
+ * @author recompose (https://github.com/acdlite/recompose)
+ */
 
-var _symbolObservable = require('symbol-observable');
-
-var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
-
-var _baconjs = require('baconjs');
-
-var _baconjs2 = _interopRequireDefault(_baconjs);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } /**
-                                                                                                                                                                                                                   * @author recompose (https://github.com/acdlite/recompose)
-                                                                                                                                                                                                                   */
-
-// eslint-disable-line import/no-unresolved
+import $$observable from 'symbol-observable';
+import Bacon from 'baconjs'; // eslint-disable-line import/no-unresolved
 
 var config = {
   fromESObservable: function fromESObservable(observable) {
-    return _baconjs2.default.fromBinder(function (sink) {
+    return Bacon.fromBinder(function (sink) {
       var _observable$subscribe = observable.subscribe({
         next: function next(val) {
-          return sink(new _baconjs2.default.Next(val));
+          return sink(new Bacon.Next(val));
         },
         error: function error(err) {
-          return sink(new _baconjs2.default.Error(err));
+          return sink(new Bacon.Error(err));
         },
         complete: function complete() {
-          return sink(new _baconjs2.default.End());
+          return sink(new Bacon.End());
         }
       }),
           unsubscribe = _observable$subscribe.unsubscribe;
@@ -53,10 +40,10 @@ var config = {
         });
         return { unsubscribe: unsubscribe };
       }
-    }, _symbolObservable2.default, function () {
+    }, $$observable, function () {
       return this;
     });
   }
 };
 
-exports.default = config;
+export default config;

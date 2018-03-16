@@ -5,6 +5,6 @@
  */
 
 export default (callback = () => null) => (props = {}) => {
-  callback(props);
-  return null;
+	callback(props);
+	return null;
 };

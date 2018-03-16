@@ -1,26 +1,6 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _infernoComponent = require('inferno-component');
-
-var _infernoComponent2 = _interopRequireDefault(_infernoComponent);
-
-var _createHelper = require('./createHelper');
-
-var _createHelper2 = _interopRequireDefault(_createHelper);
-
-var _createEagerFactory = require('./createEagerFactory');
-
-var _createEagerFactory2 = _interopRequireDefault(_createEagerFactory);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import { createComponentVNode, normalizeProps } from 'inferno';
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -28,13 +8,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author recompose (https://github.com/acdlite/recompose)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/**
+ * @author recompose (https://github.com/acdlite/recompose)
+ */
+
+import { Component } from 'inferno';
+import createHelper from './createHelper';
 
 var withReducer = function withReducer(stateName, dispatchName, reducer, initialState) {
   return function (BaseComponent) {
-    var factory = (0, _createEagerFactory2.default)(BaseComponent);
     return function (_Component) {
       _inherits(_class2, _Component);
 
@@ -72,15 +56,15 @@ var withReducer = function withReducer(stateName, dispatchName, reducer, initial
       }, {
         key: 'render',
         value: function render() {
-          var _extends2;
+          var _Object$assign;
 
-          return factory(_extends({}, this.props, (_extends2 = {}, _defineProperty(_extends2, stateName, this.state.stateValue), _defineProperty(_extends2, dispatchName, this.dispatch), _extends2)));
+          return normalizeProps(createComponentVNode(2, BaseComponent, Object.assign({}, Object.assign(this.props, (_Object$assign = {}, _defineProperty(_Object$assign, stateName, this.state.stateValue), _defineProperty(_Object$assign, dispatchName, this.dispatch), _Object$assign)))));
         }
       }]);
 
       return _class2;
-    }(_infernoComponent2.default);
+    }(Component);
   };
 };
 
-exports.default = (0, _createHelper2.default)(withReducer, 'withReducer');
+export default createHelper(withReducer, 'withReducer');

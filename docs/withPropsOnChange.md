@@ -30,6 +30,7 @@ const dec = (props) => {
 
 const performHeavyCalculation = (props) => {
   // ... do some heavy lifting
+  console.warn('do some heavy lifting...');
   return 1;
 }
 

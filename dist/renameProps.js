@@ -1,9 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 /**
  * @file   renameProps
  * @desc   renames the owner prop
@@ -17,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
  * @param   {Object}    - component props
  * @returns {Function}
  */
-exports.default = function (config) {
+export default (function (config) {
   return function (component) {
     return function (props) {
 
@@ -29,4 +23,4 @@ exports.default = function (config) {
       return component(newProps);
     };
   };
-};
+});

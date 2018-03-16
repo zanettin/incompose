@@ -5,8 +5,8 @@
 import { from, Stream } from 'most'; // eslint-disable-line import/no-unresolved
 
 const config = {
-  fromESObservable: from || Stream.from,
-  toESObservable: stream => stream,
+	fromESObservable: from || Stream.from,
+	toESObservable: stream => stream,
 };
 
 export default config;

@@ -16,21 +16,18 @@ branch(
 import {
   branch,
   compose,
-  renderComponent,
+  defaultProps,
 } from 'incompose';
 
-const A = () => (
-  <h1>a</h1>
-);
-
-const B = () => (
-  <h2>loading...</h2>
+const A = (props) => (
+  <h1>counter is {props.counter}</h1>
 );
 
 export default compose(
   branch(
     (props) => props.value % 2 === 0,
-    renderComponent(B),
+    defaultProps({counter : 1}),
+    defaultProps({counter : 2}),
   )
 )(A);
 ```

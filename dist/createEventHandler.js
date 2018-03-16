@@ -1,27 +1,16 @@
-'use strict';
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.createEventHandlerWithConfig = undefined;
+/**
+ * @author recompose (https://github.com/acdlite/recompose)
+ */
 
-var _symbolObservable = require('symbol-observable');
+import $$observable from 'symbol-observable';
+import { createChangeEmitter } from 'change-emitter';
+import { config as globalConfig } from './setObservableConfig';
 
-var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
-
-var _changeEmitter = require('change-emitter');
-
-var _setObservableConfig = require('./setObservableConfig');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } /**
-                                                                                                                                                                                                                   * @author recompose (https://github.com/acdlite/recompose)
-                                                                                                                                                                                                                   */
-
-var createEventHandlerWithConfig = exports.createEventHandlerWithConfig = function createEventHandlerWithConfig(config) {
+export var createEventHandlerWithConfig = function createEventHandlerWithConfig(config) {
   return function () {
-    var emitter = (0, _changeEmitter.createChangeEmitter)();
+    var emitter = createChangeEmitter();
     var stream = config.fromESObservable(_defineProperty({
       subscribe: function subscribe(observer) {
         var unsubscribe = emitter.listen(function (value) {
@@ -29,7 +18,7 @@ var createEventHandlerWithConfig = exports.createEventHandlerWithConfig = functi
         });
         return { unsubscribe: unsubscribe };
       }
-    }, _symbolObservable2.default, function () {
+    }, $$observable, function () {
       return this;
     }));
     return {
@@ -39,6 +28,6 @@ var createEventHandlerWithConfig = exports.createEventHandlerWithConfig = functi
   };
 };
 
-var createEventHandler = createEventHandlerWithConfig(_setObservableConfig.config);
+var createEventHandler = createEventHandlerWithConfig(globalConfig);
 
-exports.default = createEventHandler;
+export default createEventHandler;

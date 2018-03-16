@@ -28,7 +28,7 @@ export default compose(
   withLifecycle({
     componentDidMount     : (el) => console.warn('mounted'),
     componentWillUnmount  : () => console.warn('will unmount'),
-    componentShouldUpdate : (props, nextProps)  => true; // on false, component won't update
+    componentShouldUpdate : (props, nextProps)  => true, // on false, component won't update
   }),
 )(Counter);
 ```

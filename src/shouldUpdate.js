@@ -13,4 +13,5 @@ import withLifecycle from './withLifecycle';
  * @param   {Object}    - component props
  * @returns {Function}
  */
-export default (onComponentShouldUpdate) => (component) => (props) => withLifecycle({onComponentShouldUpdate})(component)(props);
+export default onComponentShouldUpdate => component => props =>
+	withLifecycle({ onComponentShouldUpdate })(component)(props);

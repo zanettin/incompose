@@ -1,8 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 /**
  * @author recompose (https://github.com/acdlite/recompose)
  */
@@ -19,4 +14,4 @@ var getDisplayName = function getDisplayName(Component) {
   return Component.displayName || Component.name || 'Component';
 };
 
-exports.default = getDisplayName;
+export default getDisplayName;

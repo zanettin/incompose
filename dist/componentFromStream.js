@@ -1,25 +1,4 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.componentFromStreamWithConfig = undefined;
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _infernoComponent = require('inferno-component');
-
-var _infernoComponent2 = _interopRequireDefault(_infernoComponent);
-
-var _changeEmitter = require('change-emitter');
-
-var _symbolObservable = require('symbol-observable');
-
-var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
-
-var _setObservableConfig = require('./setObservableConfig');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -27,11 +6,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @author recompose (https://github.com/acdlite/recompose)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var componentFromStreamWithConfig = exports.componentFromStreamWithConfig = function componentFromStreamWithConfig(config) {
+/**
+ * @author recompose (https://github.com/acdlite/recompose)
+ */
+
+import { Component } from 'inferno';
+import { createChangeEmitter } from 'change-emitter';
+import $$observable from 'symbol-observable';
+import { config as globalConfig } from './setObservableConfig';
+
+export var componentFromStreamWithConfig = function componentFromStreamWithConfig(config) {
   return function (propsToVdom) {
     return function (_Component) {
       _inherits(ComponentFromStream, _Component);
@@ -47,7 +33,7 @@ var componentFromStreamWithConfig = exports.componentFromStreamWithConfig = func
           args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ComponentFromStream.__proto__ || Object.getPrototypeOf(ComponentFromStream)).call.apply(_ref, [this].concat(args))), _this), _this.state = { vdom: null }, _this.propsEmitter = (0, _changeEmitter.createChangeEmitter)(), _this.props$ = config.fromESObservable(_defineProperty({
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ComponentFromStream.__proto__ || Object.getPrototypeOf(ComponentFromStream)).call.apply(_ref, [this].concat(args))), _this), _this.state = { vdom: null }, _this.propsEmitter = createChangeEmitter(), _this.props$ = config.fromESObservable(_defineProperty({
           subscribe: function subscribe(observer) {
             var unsubscribe = _this.propsEmitter.listen(function (props) {
               if (props) {
@@ -58,7 +44,7 @@ var componentFromStreamWithConfig = exports.componentFromStreamWithConfig = func
             });
             return { unsubscribe: unsubscribe };
           }
-        }, _symbolObservable2.default, function () {
+        }, $$observable, function () {
           return this;
         })), _this.vdom$ = config.toESObservable(propsToVdom(_this.props$)), _temp), _possibleConstructorReturn(_this, _ret);
       }
@@ -110,12 +96,12 @@ var componentFromStreamWithConfig = exports.componentFromStreamWithConfig = func
       }]);
 
       return ComponentFromStream;
-    }(_infernoComponent2.default);
+    }(Component);
   };
 };
 
 var componentFromStream = function componentFromStream(propsToVdom) {
-  return componentFromStreamWithConfig(_setObservableConfig.config)(propsToVdom);
+  return componentFromStreamWithConfig(globalConfig)(propsToVdom);
 };
 
-exports.default = componentFromStream;
+export default componentFromStream;

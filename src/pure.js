@@ -10,27 +10,29 @@ import compose from './compose';
 import shouldUpdate from './shouldUpdate';
 
 const withUpdatePolicy = shouldUpdate((props, nextProps) => {
+	// handle invalid props
+	if (
+		!props ||
+		!nextProps ||
+		typeof props !== 'object' ||
+		typeof nextProps !== 'object'
+	) {
+		return true;
+	}
 
-  // handle invalid props
-  if (!props || !nextProps || typeof(props) !== 'object' || typeof(nextProps) !== 'object') {
-    return true;
-  }
+	const keys = Object.keys(props);
 
-  const keys = Object.keys(props);
+	for (let i = 0; i < keys.length; i += 1) {
+		if (props[keys[i]] !== nextProps[keys[i]]) {
+			return true; // just update if we find a shallow diff
+		}
+	}
 
-  for(let i = 0; i < keys.length; i += 1) {
-    if (props[keys[i]] !== nextProps[keys[i]]) {
-      return true; // just update if we find a shallow diff
-    }
-  }
-
-  return false;
+	return false;
 });
 
 /**
  * @param   {Function} component
  * @returns {Function}
  */
-export default (Component) => compose(
-  withUpdatePolicy,
-)(Component);
+export default Component => compose(withUpdatePolicy)(Component);

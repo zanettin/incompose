@@ -1,8 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 /**
  * @author recompose (https://github.com/acdlite/recompose)
  */
@@ -16,7 +11,7 @@ var configureObservable = function configureObservable(c) {
   _config = c;
 };
 
-var config = exports.config = {
+export var config = {
   fromESObservable: function fromESObservable(observable) {
     return typeof _config.fromESObservable === 'function' ? _config.fromESObservable(observable) : observable;
   },
@@ -25,4 +20,4 @@ var config = exports.config = {
   }
 };
 
-exports.default = configureObservable;
+export default configureObservable;

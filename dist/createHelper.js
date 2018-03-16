@@ -1,8 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 /**
  * @author recompose (https://github.com/acdlite/recompose)
  */
@@ -41,4 +36,4 @@ var createHelper = function createHelper(func, helperName) {
   return func;
 };
 
-exports.default = createHelper;
+export default createHelper;

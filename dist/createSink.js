@@ -1,16 +1,10 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 /**
  * @file   createSink
  * @author Roman Zanettin <roman.zanettin@ringieraxelspringer.ch>
  * @date   2017-02-08
  */
 
-exports.default = function () {
+export default (function () {
   var callback = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : function () {
     return null;
   };
@@ -20,4 +14,4 @@ exports.default = function () {
     callback(props);
     return null;
   };
-};
+});

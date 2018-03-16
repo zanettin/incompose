@@ -11,14 +11,15 @@
  * @param   {Object}    - component props
  * @returns {Function}
  */
-export default (propName) => (component) => (props) => {
+export default propName => component => props => {
+	const newProps =
+		props[propName] && typeof props[propName] === 'object'
+			? { ...props, ...props[propName] }
+			: { ...props };
 
-  const newProps = (props[propName] && typeof props[propName] === 'object') ?
-    {...props, ...props[propName]} : {...props};
+	if (newProps[propName]) {
+		delete newProps[propName];
+	}
 
-  if (newProps[propName]) {
-    delete newProps[propName];
-  }
-
-  return component(newProps);
+	return component(newProps);
 };

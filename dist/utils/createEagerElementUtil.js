@@ -14,9 +14,6 @@ var _inferno2 = _interopRequireDefault(_inferno);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var createVNode = _inferno2.default.createVNode;
-
-
 var createEagerElementUtil = function createEagerElementUtil(hasKey, isReferentiallyTransparent, type, props, children) {
   if (!hasKey && isReferentiallyTransparent) {
     if (children) {
@@ -28,12 +25,12 @@ var createEagerElementUtil = function createEagerElementUtil(hasKey, isReferenti
   var Component = type;
 
   if (children) {
-    return createVNode(16, Component, null, null, _extends({}, props, {
+    return (0, _inferno.normalizeProps)((0, _inferno.createComponentVNode)(2, Component, _extends({}, props, {
       children: children
-    }));
+    })));
   }
 
-  return createVNode(16, Component, null, null, _extends({}, props));
+  return (0, _inferno.normalizeProps)((0, _inferno.createComponentVNode)(2, Component, _extends({}, props)));
 };
 
 exports.default = createEagerElementUtil;

@@ -13,7 +13,7 @@ defaultProps(
 ```jsx
 import {
   compose,
-  withDefaultProps
+  defaultProps
 } from 'incompose';
 
 const LeaderBoard = (props) => (
@@ -23,7 +23,7 @@ const LeaderBoard = (props) => (
 );
 
 export default compose(
-  withDefaultProps({
+  defaultProps({
     score : 100,
     name  : 'John',
   }),

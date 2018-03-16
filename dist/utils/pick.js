@@ -1,8 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 /**
  * @author recompose (https://github.com/acdlite/recompose)
  */
@@ -18,4 +13,4 @@ var pick = function pick(obj, keys) {
   return result;
 };
 
-exports.default = pick;
+export default pick;
