@@ -2101,19 +2101,24 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
 
-inferno-create-class@^4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/inferno-create-class/-/inferno-create-class-4.0.3.tgz#291550c03bc52fa76c40c6feb5c40e568d704d9a"
+inferno-create-class@5.0.0-0:
+  version "5.0.0-0"
+  resolved "https://registry.yarnpkg.com/inferno-create-class/-/inferno-create-class-5.0.0-0.tgz#e23c1339efaab72e68891ef03e707f8827623100"
 
-inferno-vnode-flags@4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/inferno-vnode-flags/-/inferno-vnode-flags-4.0.3.tgz#1b5138f9ddef96f69d40c34745f729e941b409b0"
+inferno-shared@5.0.0-0:
+  version "5.0.0-0"
+  resolved "https://registry.yarnpkg.com/inferno-shared/-/inferno-shared-5.0.0-0.tgz#e1e26f4cfd2948de0ea82c730887e4baab93725c"
 
-inferno@^4.0.2:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/inferno/-/inferno-4.0.3.tgz#7fc4c5df7428a0cb90ee92a3bb169a1ddedc096a"
+inferno-vnode-flags@5.0.0-0:
+  version "5.0.0-0"
+  resolved "https://registry.yarnpkg.com/inferno-vnode-flags/-/inferno-vnode-flags-5.0.0-0.tgz#ef79aea999689abb298e2eabae11014d1281fa76"
+
+inferno@5.0.0-0:
+  version "5.0.0-0"
+  resolved "https://registry.yarnpkg.com/inferno/-/inferno-5.0.0-0.tgz#f0b5ea8d715e9a2258eefc1fafcdfbb6ea5eba31"
   dependencies:
-    inferno-vnode-flags "4.0.3"
+    inferno-shared "5.0.0-0"
+    inferno-vnode-flags "5.0.0-0"
     opencollective "^1.0.3"
 
 inflight@^1.0.4:

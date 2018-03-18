@@ -34,8 +34,6 @@
   },
   "dependencies": {
     "change-emitter": "^0.1.6",
-    "inferno": "^4.0.2",
-    "inferno-create-class": "^4.0.3",
     "symbol-observable": "^1.2.0"
   },
   "devDependencies": {
@@ -48,6 +46,8 @@
     "eslint": "^4.17.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-inferno": "^7.6.0",
+    "inferno": "5.0.0-0",
+    "inferno-create-class": "5.0.0-0",
     "jest": "^22.2.2",
     "prettier": "^1.10.2"
   },
@@ -57,5 +57,9 @@
       "email": "CarstenLamm+incompose@gmail.com",
       "url": "https://github.com/FQ400"
     }
-  ]
+  ],
+  "peerDependencies": {
+    "inferno": "5.0.0-0",
+    "inferno-create-class": "5.0.0-0"
+  }
 }
