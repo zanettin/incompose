@@ -1,6 +1,6 @@
 {
   "name": "incompose",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "An inferno utility belt for function components and higher-order components",
   "repository": {
     "type": "git",
@@ -46,8 +46,8 @@
     "eslint": "^4.17.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-inferno": "^7.6.0",
-    "inferno": "5.0.0-0",
-    "inferno-create-class": "5.0.0-0",
+    "inferno": "5.0.0",
+    "inferno-create-class": "5.0.0",
     "jest": "^22.2.2",
     "prettier": "^1.10.2"
   },
@@ -59,7 +59,7 @@
     }
   ],
   "peerDependencies": {
-    "inferno": "5.0.0-0",
-    "inferno-create-class": "5.0.0-0"
+    "inferno": "5.0.0",
+    "inferno-create-class": "5.0.0"
   }
 }

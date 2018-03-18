@@ -10,9 +10,13 @@ Incompose is a [Inferno.js](https://infernojs.org/) clone of the famous [recompo
 npm install incompose
 ```
 
-## Inferno v4
-If you use inferno in version `>=4.0` install incompose `>=2.0`.
-Inferno v3 and bellow please use incompose `1.1.0`.
+## Incompose / Inferno version map
+Incompose works with specific version of inferno. Please make sure you use the correct version.
+| Inferno verion | Incompose version |
+| -- | -- |
+| `v5.x` | `>= v.3.0.0` |
+| `v4.x` | `v.2.0.0` |
+| `< v4.0` | `< v.2` |
 
 ## Support
 Following HoCs are available. If you miss any helper/HoC please send me a note on twitter [@roman_zanettin](https://twitter.com/roman_zanettin) or create an issue / open a PR. Thanks.
