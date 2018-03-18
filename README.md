@@ -12,6 +12,7 @@ npm install incompose
 
 ## Incompose / Inferno version map
 Incompose works with specific version of inferno. Please make sure you use the correct version.
+
 | Inferno verion | Incompose version |
 | -- | -- |
 | `v5.x` | `>= v.3.0.0` |
