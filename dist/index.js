@@ -11,6 +11,7 @@ export { default as createEventHandler } from './createEventHandler';
 export { default as createSink } from './createSink';
 export { default as defaultProps } from './defaultProps';
 export { default as flattenProps } from './flattenProps';
+export { default as mapProps } from './mapProps';
 export { default as nest } from './nest';
 export { default as pure } from './pure';
 export { default as renderComponent } from './renderComponent';
