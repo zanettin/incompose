@@ -31,6 +31,7 @@ Following HoCs are available. If you miss any helper/HoC please send me a note o
 |[createSink](docs/createSink.md)|![0.0.6](https://img.shields.io/badge/version-0.0.6-green.svg)|
 |[defaultProps](docs/defaultProps.md)|![0.0.3](https://img.shields.io/badge/version-0.0.3-green.svg)|
 |[flattenProps](docs/flattenProps.md)|![0.0.4](https://img.shields.io/badge/version-0.0.4-green.svg)|
+|[mapProps](docs/mapProps.md)|![3.0.1](https://img.shields.io/badge/version-3.0.1-green.svg)|
 |[nest](docs/nest.md)|![0.0.7](https://img.shields.io/badge/version-0.0.7-green.svg)|
 |[pure](docs/pure.md)|![0.0.8](https://img.shields.io/badge/version-0.0.8-green.svg)|
 |[renderComponent](docs/renderComponent.md)|![0.0.8](https://img.shields.io/badge/version-0.0.8-green.svg)|
