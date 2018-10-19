@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.1] - 2018-10-19
+### Added
+- mapProps - thx to ZoltanDalmadi
+
 ## [3.0.0] - 2018-03-18
 ### Update
 - incompose is now ready for inferno `^5.0` - thx to IgnusG!
