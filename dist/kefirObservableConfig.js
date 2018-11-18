@@ -1,14 +1,23 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _kefir = _interopRequireDefault(require("kefir"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /**
  * @author recompose (https://github.com/acdlite/recompose)
  */
-
-import Kefir from 'kefir'; // eslint-disable-line import/no-unresolved
-
+// eslint-disable-line import/no-unresolved
 var config = {
-  fromESObservable: Kefir.fromESObservable,
+  fromESObservable: _kefir.default.fromESObservable,
   toESObservable: function toESObservable(stream) {
     return stream.toESObservable();
   }
 };
-
-export default config;
+var _default = config;
+exports.default = _default;

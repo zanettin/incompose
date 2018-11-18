@@ -1,3 +1,10 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
 /**
  * @file   mapProps
  * @desc   maps props on component init
@@ -11,10 +18,12 @@
  * @param   {Object}    - component props
  * @returns {Function}
  */
-export default (function (mapper) {
+var _default = function _default(mapper) {
   return function (component) {
     return function (props) {
       return component(mapper(props));
     };
   };
-});
+};
+
+exports.default = _default;

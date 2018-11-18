@@ -1,3 +1,10 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
 /**
  * @file   renameProp
  * @desc   renames the owner prop
@@ -12,7 +19,7 @@
  * @param   {Object}    - component props
  * @returns {Function}
  */
-export default (function (oldName, newName) {
+var _default = function _default(oldName, newName) {
   return function (component) {
     return function (props) {
       var newProps = props;
@@ -25,4 +32,6 @@ export default (function (oldName, newName) {
       return component(newProps);
     };
   };
-});
+};
+
+exports.default = _default;

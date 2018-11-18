@@ -1,4 +1,11 @@
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -38,13 +45,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
  *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
 var hasOwnProperty = Object.prototype.hasOwnProperty;
-
 /**
  * inlined Object.is polyfill to avoid requiring consumers ship their own
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
  */
+
 function is(x, y) {
   // SameValue algorithm
   if (x === y) {
@@ -57,18 +63,19 @@ function is(x, y) {
     return x !== x && y !== y;
   }
 }
-
 /**
  * Performs equality by iterating through keys on an object and returning false
  * when any key has values which are not strictly equal between the arguments.
  * Returns true when the values of all keys are strictly equal.
  */
+
+
 function shallowEqual(objA, objB) {
   if (is(objA, objB)) {
     return true;
   }
 
-  if ((typeof objA === 'undefined' ? 'undefined' : _typeof(objA)) !== 'object' || objA === null || (typeof objB === 'undefined' ? 'undefined' : _typeof(objB)) !== 'object' || objB === null) {
+  if (_typeof(objA) !== 'object' || objA === null || _typeof(objB) !== 'object' || objB === null) {
     return false;
   }
 
@@ -77,9 +84,9 @@ function shallowEqual(objA, objB) {
 
   if (keysA.length !== keysB.length) {
     return false;
-  }
+  } // Test for A's keys different from B.
 
-  // Test for A's keys different from B.
+
   for (var i = 0; i < keysA.length; i++) {
     if (!hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
       return false;
@@ -89,4 +96,5 @@ function shallowEqual(objA, objB) {
   return true;
 }
 
-export default shallowEqual;
+var _default = shallowEqual;
+exports.default = _default;
