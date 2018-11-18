@@ -3,7 +3,12 @@
 # Incompose
 Incompose is a [Inferno.js](https://infernojs.org/) clone of the famous [recompose](https://github.com/acdlite/recompose) lib for React.
 
-[![Build Status](https://semaphoreci.com/api/v1/open-source/incompose/branches/master/shields_badge.svg)](https://semaphoreci.com/open-source/incompose) [![npm version](https://badge.fury.io/js/incompose.svg)](https://www.npmjs.com/package/incompose) [![npm downloads](https://img.shields.io/npm/dm/incompose.svg?style=flat-square)](https://www.npmjs.com/package/incompose) [![Code Climate](https://codeclimate.com/github/zanettin/incompose/badges/gpa.svg)](https://codeclimate.com/github/zanettin/incompose) [![Test Coverage](https://codeclimate.com/github/zanettin/incompose/badges/coverage.svg)](https://codeclimate.com/github/zanettin/incompose/coverage) [![MIT](https://img.shields.io/npm/l/express.svg)](LICENSE.md)
+[![Build Status](https://semaphoreci.com/api/v1/open-source/incompose/branches/master/shields_badge.svg)](https://semaphoreci.com/open-source/incompose) 
+[![npm version](https://badge.fury.io/js/incompose.svg)](https://www.npmjs.com/package/incompose) 
+[![npm downloads](https://img.shields.io/npm/dm/incompose.svg?style=flat-square)](https://www.npmjs.com/package/incompose) 
+[![Code Climate](https://codeclimate.com/github/zanettin/incompose/badges/gpa.svg)](https://codeclimate.com/github/zanettin/incompose) 
+[![Test Coverage](https://codeclimate.com/github/zanettin/incompose/badges/coverage.svg)](https://codeclimate.com/github/zanettin/incompose/coverage) 
+[![MIT](https://img.shields.io/npm/l/express.svg)](LICENSE.md)
 
 ## Installation
 ```
@@ -15,6 +20,7 @@ Incompose works with specific version of inferno. Please make sure you use the c
 
 | Inferno verion | Incompose version |
 | -- | -- |
+| `v6.x` | `>= v.4.0.0` |
 | `v5.x` | `>= v.3.0.0` |
 | `v4.x` | `v.2.0.0` |
 | `< v4.0` | `< v.2` |

@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.0] - 2018-11-18
+### Update
+- upgraded all npm packages
+- babel v7 support
+- inferno v6 support
+
 ## [3.0.2] - 2018-10-19
 ### Fixed
 - added named import for `mapProps`

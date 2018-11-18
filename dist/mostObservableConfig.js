@@ -1,14 +1,21 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _most = require("most");
+
 /**
  * @author recompose (https://github.com/acdlite/recompose)
  */
-
-import { from, Stream } from 'most'; // eslint-disable-line import/no-unresolved
-
+// eslint-disable-line import/no-unresolved
 var config = {
-  fromESObservable: from || Stream.from,
+  fromESObservable: _most.from || _most.Stream.from,
   toESObservable: function toESObservable(stream) {
     return stream;
   }
 };
-
-export default config;
+var _default = config;
+exports.default = _default;
