@@ -10,7 +10,7 @@ const withState = (
 	stateUpdaterName,
 	initialState,
 ) => BaseComponent => {
-	return class extends Component {
+	const StatedComponent = class extends Component {
 		state = {
 			stateValue:
 				typeof initialState === 'function'
@@ -38,6 +38,7 @@ const withState = (
 			);
 		}
 	};
+	return props => <StatedComponent {...props} />;
 };
 
 export default createHelper(withState, 'withState');
