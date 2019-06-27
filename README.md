@@ -20,6 +20,7 @@ Incompose works with specific version of inferno. Please make sure you use the c
 
 | Inferno verion | Incompose version |
 | -- | -- |
+| `v7.x` | `>= v.5.0.0` |
 | `v6.x` | `>= v.4.0.0` |
 | `v5.x` | `>= v.3.0.0` |
 | `v4.x` | `v.2.0.0` |

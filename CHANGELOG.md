@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.0.0] - 2019-06-27
+### Update
+- upgraded all npm packages
+- inferno v7 support
+
+### Fixed
+- withState is composable again - thx to ioi0!
+
 ## [4.0.0] - 2018-11-18
 ### Update
 - upgraded all npm packages
