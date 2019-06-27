@@ -29,59 +29,60 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var withPropsOnChange = function withPropsOnChange(shouldMapOrKeys, propsMapper) {
   return function (BaseComponent) {
+    var _temp;
+
     var shouldMap = typeof shouldMapOrKeys === 'function' ? shouldMapOrKeys : function (props, nextProps) {
       return !(0, _shallowEqual.default)((0, _pick.default)(props, shouldMapOrKeys), (0, _pick.default)(nextProps, shouldMapOrKeys));
     };
-    return (
-      /*#__PURE__*/
-      function (_Component) {
-        _inherits(_class2, _Component);
+    return _temp =
+    /*#__PURE__*/
+    function (_Component) {
+      _inherits(_temp, _Component);
 
-        function _class2() {
-          var _getPrototypeOf2;
+      function _temp() {
+        var _getPrototypeOf2;
 
-          var _this;
+        var _this;
 
-          _classCallCheck(this, _class2);
+        _classCallCheck(this, _temp);
 
-          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-          }
-
-          _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(_class2)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-          _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "computedProps", propsMapper(_this.props));
-
-          return _this;
+        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
         }
 
-        _createClass(_class2, [{
-          key: "componentWillReceiveProps",
-          value: function componentWillReceiveProps(nextProps) {
-            if (shouldMap(this.props, nextProps)) {
-              this.computedProps = propsMapper(nextProps);
-            }
-          }
-        }, {
-          key: "render",
-          value: function render() {
-            return (0, _inferno.normalizeProps)((0, _inferno.createComponentVNode)(2, BaseComponent, _objectSpread({}, Object.assign(this.props, this.computedProps))));
-          }
-        }]);
+        _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(_temp)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-        return _class2;
-      }(_inferno.Component)
-    );
+        _defineProperty(_assertThisInitialized(_this), "computedProps", propsMapper(_this.props));
+
+        return _this;
+      }
+
+      _createClass(_temp, [{
+        key: "componentWillReceiveProps",
+        value: function componentWillReceiveProps(nextProps) {
+          if (shouldMap(this.props, nextProps)) {
+            this.computedProps = propsMapper(nextProps);
+          }
+        }
+      }, {
+        key: "render",
+        value: function render() {
+          return (0, _inferno.normalizeProps)((0, _inferno.createComponentVNode)(2, BaseComponent, _objectSpread({}, Object.assign(this.props, this.computedProps))));
+        }
+      }]);
+
+      return _temp;
+    }(_inferno.Component), _temp;
   };
 };
 

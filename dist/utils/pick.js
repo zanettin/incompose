@@ -14,7 +14,7 @@ var pick = function pick(obj, keys) {
   for (var i = 0; i < keys.length; i++) {
     var key = keys[i];
 
-    if (obj.hasOwnProperty(key)) {
+    if (obj && obj[key]) {
       result[key] = obj[key];
     }
   }

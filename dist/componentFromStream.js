@@ -27,107 +27,108 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var componentFromStreamWithConfig = function componentFromStreamWithConfig(config) {
   return function (propsToVdom) {
-    return (
-      /*#__PURE__*/
-      function (_Component) {
-        _inherits(ComponentFromStream, _Component);
+    var _temp;
 
-        function ComponentFromStream() {
-          var _getPrototypeOf2;
+    return _temp =
+    /*#__PURE__*/
+    function (_Component) {
+      _inherits(ComponentFromStream, _Component);
 
-          var _this;
+      function ComponentFromStream() {
+        var _getPrototypeOf2;
 
-          _classCallCheck(this, ComponentFromStream);
+        var _this;
 
-          for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-          }
+        _classCallCheck(this, ComponentFromStream);
 
-          _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ComponentFromStream)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-          _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-            vdom: null
-          });
-
-          _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "propsEmitter", (0, _changeEmitter.createChangeEmitter)());
-
-          _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "props$", config.fromESObservable(_defineProperty({
-            subscribe: function subscribe(observer) {
-              var unsubscribe = _this.propsEmitter.listen(function (props) {
-                if (props) {
-                  observer.next(props);
-                } else {
-                  observer.complete();
-                }
-              });
-
-              return {
-                unsubscribe: unsubscribe
-              };
-            }
-          }, _symbolObservable.default, function () {
-            return this;
-          })));
-
-          _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "vdom$", config.toESObservable(propsToVdom(_this.props$)));
-
-          return _this;
+        for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
         }
 
-        _createClass(ComponentFromStream, [{
-          key: "componentWillMount",
-          value: function componentWillMount() {
-            var _this2 = this;
+        _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ComponentFromStream)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-            // Subscribe to child prop changes so we know when to re-render
-            this.subscription = this.vdom$.subscribe({
-              next: function next(vdom) {
-                _this2.setState({
-                  vdom: vdom
-                });
+        _defineProperty(_assertThisInitialized(_this), "state", {
+          vdom: null
+        });
+
+        _defineProperty(_assertThisInitialized(_this), "propsEmitter", (0, _changeEmitter.createChangeEmitter)());
+
+        _defineProperty(_assertThisInitialized(_this), "props$", config.fromESObservable(_defineProperty({
+          subscribe: function subscribe(observer) {
+            var unsubscribe = _this.propsEmitter.listen(function (props) {
+              if (props) {
+                observer.next(props);
+              } else {
+                observer.complete();
               }
             });
-            this.propsEmitter.emit(this.props);
-          }
-        }, {
-          key: "componentWillReceiveProps",
-          value: function componentWillReceiveProps(nextProps) {
-            // Receive new props from the owner
-            this.propsEmitter.emit(nextProps);
-          }
-        }, {
-          key: "shouldComponentUpdate",
-          value: function shouldComponentUpdate(nextProps, nextState) {
-            return nextState.vdom !== this.state.vdom;
-          }
-        }, {
-          key: "componentWillUnmount",
-          value: function componentWillUnmount() {
-            // Call without arguments to complete stream
-            this.propsEmitter.emit(); // Clean-up subscription before un-mounting
 
-            this.subscription.unsubscribe();
+            return {
+              unsubscribe: unsubscribe
+            };
           }
-        }, {
-          key: "render",
-          value: function render() {
-            return this.state.vdom;
-          }
-        }]);
+        }, _symbolObservable.default, function () {
+          return this;
+        })));
 
-        return ComponentFromStream;
-      }(_inferno.Component)
-    );
+        _defineProperty(_assertThisInitialized(_this), "vdom$", config.toESObservable(propsToVdom(_this.props$)));
+
+        return _this;
+      }
+
+      _createClass(ComponentFromStream, [{
+        key: "componentWillMount",
+        value: function componentWillMount() {
+          var _this2 = this;
+
+          // Subscribe to child prop changes so we know when to re-render
+          this.subscription = this.vdom$.subscribe({
+            next: function next(vdom) {
+              _this2.setState({
+                vdom: vdom
+              });
+            }
+          });
+          this.propsEmitter.emit(this.props);
+        }
+      }, {
+        key: "componentWillReceiveProps",
+        value: function componentWillReceiveProps(nextProps) {
+          // Receive new props from the owner
+          this.propsEmitter.emit(nextProps);
+        }
+      }, {
+        key: "shouldComponentUpdate",
+        value: function shouldComponentUpdate(nextProps, nextState) {
+          return nextState.vdom !== this.state.vdom;
+        }
+      }, {
+        key: "componentWillUnmount",
+        value: function componentWillUnmount() {
+          // Call without arguments to complete stream
+          this.propsEmitter.emit(); // Clean-up subscription before un-mounting
+
+          this.subscription.unsubscribe();
+        }
+      }, {
+        key: "render",
+        value: function render() {
+          return this.state.vdom;
+        }
+      }]);
+
+      return ComponentFromStream;
+    }(_inferno.Component), _temp;
   };
 };
 

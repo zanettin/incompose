@@ -19,18 +19,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var lifecycle = function lifecycle(spec) {
   return function (BaseComponent) {
-    if (process.env.NODE_ENV !== 'production' && spec.hasOwnProperty('render')) {
+    if (process.env.NODE_ENV !== 'production' && spec.render) {
       console.error('lifecycle() does not support the render method; its behavior is to ' + 'pass all props and state to the base component.');
     }
-    /* eslint-disable react/prefer-es6-class */
-
 
     return (0, _infernoCreateClass.createClass)(_objectSpread({}, spec, {
       render: function render() {
         return (0, _inferno.normalizeProps)((0, _inferno.createComponentVNode)(2, BaseComponent, _objectSpread({}, this.props)));
       }
     }));
-    /* eslint-enable react/prefer-es6-class */
   };
 };
 
