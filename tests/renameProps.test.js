@@ -6,10 +6,10 @@ const originalProps = {
 	c: 3,
 };
 
-const component = props => props;
+const component = props => ({ props });
 
 test('should rename prop `a` to `z` and `b` to `y`', () => {
-	const props = renameProps({ a: 'z', b: 'y' })(component)(originalProps);
+	const{ props } = renameProps({ a: 'z', b: 'y' })(component)(originalProps);
 	expect(props).toEqual({
 		z: 1,
 		y: 2,

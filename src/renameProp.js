@@ -12,7 +12,7 @@
  * @param   {Object}    - component props
  * @returns {Function}
  */
-export default (oldName, newName) => component => props => {
+export default (oldName, newName) => Component => props => {
 	const newProps = props;
 
 	if (props[oldName]) {
@@ -20,5 +20,5 @@ export default (oldName, newName) => component => props => {
 		delete newProps[oldName];
 	}
 
-	return component(newProps);
+	return <Component {...newProps} />;
 };

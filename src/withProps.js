@@ -11,5 +11,6 @@
  * @param   {Object}    - component props
  * @returns {Function}
  */
-export default config => component => props =>
-	component({ ...props, ...config });
+export default config => Component => props => (
+	<Component {...props} {...config} />
+);

@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.0.1] - 2019-07-06
+### Update
+- `shouldUpdate` and `withLifecycle` use inferno hooks under the hood
+### Fixed
+- fixed issue #26 composition issues - thx to ioi0!
+
 ## [5.0.0] - 2019-06-27
 ### Update
 - upgraded all npm packages
@@ -24,7 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [3.0.1] - 2018-10-19
 ### Added
-- mapProps - thx to ZoltanDalmadi
+- `mapProps` - thx to ZoltanDalmadi
 
 ## [3.0.0] - 2018-03-18
 ### Update

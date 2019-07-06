@@ -11,7 +11,7 @@ const mappedProps = {
 	e: 6,
 };
 
-const component = props => props;
+const component = props => ({ props });
 
 const mapper = ({ a, b, c }) => ({
 	d: a + b,
@@ -19,6 +19,6 @@ const mapper = ({ a, b, c }) => ({
 });
 
 test('should map components original props to different props', () => {
-	const props = mapProps(mapper)(component)(originalProps);
+	const { props } = mapProps(mapper)(component)(originalProps);
 	expect(props).toEqual(mappedProps);
 });

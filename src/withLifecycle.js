@@ -2,23 +2,34 @@
  * @author recompose (https://github.com/acdlite/recompose)
  */
 
-import { createClass } from 'inferno-create-class';
-import createHelper from './createHelper';
+export default lifecycles => Component => {
+	// avoid breaking changes by mapping class lifecycles to functional lifecycles
+	const functionalLifecycles = {};
 
-const lifecycle = spec => BaseComponent => {
-	if (process.env.NODE_ENV !== 'production' && spec.render) {
-		console.error(
-			'lifecycle() does not support the render method; its behavior is to ' +
-				'pass all props and state to the base component.',
-		);
+	if (lifecycles.componentWillMount) {
+		functionalLifecycles.onComponentWillMount = lifecycles.componentWillMount;
+	}
+	if (lifecycles.componentDidMount) {
+		functionalLifecycles.onComponentDidMount = lifecycles.componentDidMount;
+	}
+	if (lifecycles.shouldComponentUpdate) {
+		functionalLifecycles.onComponentShouldUpdate =
+			lifecycles.shouldComponentUpdate;
+	}
+	if (lifecycles.componentWillUpdate) {
+		functionalLifecycles.onComponentWillUpdate = lifecycles.componentWillUpdate;
+	}
+	if (lifecycles.componentDidUpdate) {
+		functionalLifecycles.onComponentDidUpdate = lifecycles.componentDidUpdate;
+	}
+	if (lifecycles.componentWillUnmount) {
+		functionalLifecycles.onComponentWillUnmount =
+			lifecycles.componentWillUnmount;
 	}
 
-	return createClass({
-		...spec,
-		render() {
-			return <BaseComponent {...this.props} />;
-		},
-	});
-};
+	Component.defaultHooks = {
+		...functionalLifecycles,
+	};
 
-export default createHelper(lifecycle, 'lifecycle');
+	return Component;
+};

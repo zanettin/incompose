@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _inferno = require("inferno");
+
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -15,13 +17,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * @date   2017-02-07
  */
 var _default = function _default(handlerCreators) {
-  return function (component) {
+  return function (Component) {
     return function (props) {
       var composed = Object.keys(handlerCreators).reduce(function (acc, key) {
         acc[key] = handlerCreators[key](props);
         return acc;
       }, {});
-      return component(_objectSpread({}, props, composed));
+      return (0, _inferno.normalizeProps)((0, _inferno.createComponentVNode)(2, Component, _objectSpread({}, props, composed)));
     };
   };
 };
